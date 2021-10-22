@@ -16,7 +16,7 @@
 - (d) $q \to p$ : ***If the votes have been counted, the election is decided.***
 - (e) $\neg{q} \to \neg{p}$ : ***If the votes have not been counted, the election is not be decided.***
 - (f) $\neg{p} \to \neg{q}$ : ***If the election is not decided, then the votes have not been counted.***
-- (g) $p \iff{q}$ : ***The election will be decided if and only if the votes have been counted.***
+- (g) $p \leftrightarrow{q}$ : ***The election will be decided if and only if the votes have been counted.***
 - (h) $\neg{q}\lor{}(\neg{p}\land{q})$ : ***The election is not decided and the votes have been counted, or the votes haven't been counted.***
 
 **28 . State the converse, contrapositive, and inverse of each of these conditional statements.**  
