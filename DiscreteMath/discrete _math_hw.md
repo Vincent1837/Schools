@@ -1,3 +1,4 @@
+<font face="Times New Roman">
 
 # Discrete Mathematics Homework1
   
@@ -9,14 +10,14 @@
 
 **10 . Let p and q be the propositions “The election is decided” and “The votes have been counted,” respectively. Express each of these compound propositions as an English sentence.**
 
-- (a) &nbsp;&nbsp;&nbsp;¬p : ***The election is not dicided.***
-- (b) &nbsp;&nbsp; p∨q : ***The election is decided or the votes have been counted.***
-- (c) &nbsp;¬p∧q : ***The election is not dicided and the votes have been couted.***
-- (d) &nbsp;&nbsp;q→p : ***If the votes have been counted, the election is decided.***
-- (e) ¬q→¬p : ***If the votes have not been counted, the election is not be decided.***
-- (f) ¬p→¬q : ***If the election is not decided, then the votes have not been counted.***
-- (g) p↔q : ***The election will be decided if and only if the votes have been counted.***
-- (h) ¬q∨(¬p∧q) : ***The election is not decided and the votes have been counted, or the votes haven't been counted.***
+- (a) $\neg{p}$ : ***The election is not dicided.***
+- (b) $p \lor{q}$ : ***The election is decided or the votes have been counted.***
+- (c) $\neg{p} \land{q}$ : ***The election is not dicided and the votes have been couted.***
+- (d) $q \to p$ : ***If the votes have been counted, the election is decided.***
+- (e) $\neg{q} \to \neg{p}$ : ***If the votes have not been counted, the election is not be decided.***
+- (f) $\neg{p} \to \neg{q}$ : ***If the election is not decided, then the votes have not been counted.***
+- (g) $p \iff{q}$ : ***The election will be decided if and only if the votes have been counted.***
+- (h) $\neg{q}\lor{}(\neg{p}\land{q})$ : ***The election is not decided and the votes have been counted, or the votes haven't been counted.***
 
 **28 . State the converse, contrapositive, and inverse of each of these conditional statements.**  
 
@@ -54,3 +55,4 @@
 ## Section 1-3
 
 
+</font>
