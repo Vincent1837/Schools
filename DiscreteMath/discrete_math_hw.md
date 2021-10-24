@@ -82,7 +82,7 @@ $\equiv{p\lor\neg{q}}$
   So it's not a tautology.***
 
 **36 . When does *s\* =s* ,where *s* is a compound proposition?**
-- ******
+- $s:p\land T;p\lor F$
 
 ## Section 1-4
 
