@@ -16,17 +16,22 @@ def function(number):
 
 while True:
     get = input("Please input the variable for F(N) :")
-    if "." in get or "-" in get:
-        print("Error: Input should be A positive integer!\n")
+    get_set = set(get)
+    
+    if get == "0":
+        break
+
+    elif "." in get or "-" in get:
+        print("Error: Input should be a positive integer!\n")
 
     elif " " in get:
         print("Error: Blank space found in the input!\n")
-
-    elif get > 500:
-        print("Error: Input should be less than  or equal to 500!\n")
     
-    elif set(x for x in get) in {str(num) for num in range(10)}:
+    elif get_set.issubset({str(num) for num in range(10)}):
+        if int(get) > 500:
+            print("Error: Input should be less than  or equal to 500!\n")
+            continue
         print(function(int(get)))
 
     else :
-        print("Error: Input should be A positive integer!\n")
+        print("Error: Input should be a positive integer!\n")
