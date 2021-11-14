@@ -20,7 +20,7 @@ while {0}.issubset(set(seat)):
                 seat[i+count] = count+1
     count += 1
 
-farest_seats = [x for x in range(len(seat)) if seat[x] == count]
+furthest_seats = [x for x in range(len(seat)) if seat[x] == count]
 L = count-1
 print("L = {}".format(L))
-print("i = {}".format(farest_seats))
+print("i = {}".format(furthest_seats))
