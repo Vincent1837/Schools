@@ -24,7 +24,7 @@ while True:
     if string == "-1":
         break
     flg = True
-    for i in range(convert62(max(string))+1,62 ):
+    for i in range(convert62(max(string))+1,63 ):
         if func(string, i) % (i-1) == 0:
             print(i)
             flg = False
