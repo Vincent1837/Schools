@@ -12,7 +12,7 @@ lst = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['j', 'k', 'l'],
 if digits == "1":
     print(None)
 else:
-    with open("110502567.txt","w") as data:
+    with open("110502567.txt","w", encoding="utf-8") as data:
         for i in list(itertools.product(*[lst[int(x)-2] for x in digits])):
             str = ""
             for j in i:
