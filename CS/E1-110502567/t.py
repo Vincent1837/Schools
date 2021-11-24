@@ -1,1 +1,2 @@
-print("123456"[2:])
+a, _, b = input()
+print(a, b)
