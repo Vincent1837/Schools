@@ -1,2 +1,2 @@
-str = "they are only good at rehearsing. One becomes an expert as long as others consider him/her to be one, after all, who will call himself/herself an expert?".split()
-print(len(str))
+lst = [x for x in range(1000, 10000) if x%35 == 0]
+print(12*11*10*9*8*7/(6*5*4*3*2))
