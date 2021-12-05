@@ -1,4 +1,4 @@
-'''def factorial(n):
+def factorial(n):
     if n == 1 or n == 0:
         return 1
     return n * factorial(n-1)
@@ -9,8 +9,8 @@ def p(n:int, r:int):
 def c(n:int, r:int):
     return factorial(n)//(factorial(r)*factorial(n-r))
 
-print(c(12,5)-c(9,5)-c(7,5))'''
-def a_new_decorator(a_func):
+print(c(15,3))
+'''def a_new_decorator(a_func):
 
     def wrapTheFunction():
         print("I am doing some boring work before executing a_func()")
@@ -33,4 +33,4 @@ a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoratio
 a_function_requiring_decoration()
 #outputs:I am doing some boring work before executing a_func()
 #        I am the function which needs some decoration to remove my foul smell
-#        I am doing some boring work after executing a_func()
+#        I am doing some boring work after executing a_func()'''
