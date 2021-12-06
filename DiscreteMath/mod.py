@@ -9,7 +9,7 @@ def p(n:int, r:int):
 def c(n:int, r:int):
     return factorial(n)//(factorial(r)*factorial(n-r))
 
-print(c(15,3))
+print(21*120)
 '''def a_new_decorator(a_func):
 
     def wrapTheFunction():
