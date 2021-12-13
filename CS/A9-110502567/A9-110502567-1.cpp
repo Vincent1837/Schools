@@ -4,7 +4,7 @@
 * Student Number: 11052567
 * Course: 2021-CE1003-B
 */
-#include <iostream>
+# include <iostream>
 using namespace std;
 int main(){
     int A[5][5], B[5][5];
