@@ -5,7 +5,7 @@ Student Number: 110502567
 Course 2021-CE1003-B
 """
 def convert62(c):
-    if ord(c) in range(48, 58):
+    if ord(c) in range(47, 58):
         return int(c)
     elif ord(c) in range(65, 91):
         return ord(c)-55
