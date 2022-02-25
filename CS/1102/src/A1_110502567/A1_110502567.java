@@ -1,4 +1,5 @@
-/* 
+package A1_110502567;
+/*
 Assignment 1
 Student Number: 110502567
 Course: 2022-CE1002

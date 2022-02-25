@@ -1,3 +1,4 @@
+package P2_110502567;
 /*
 Practice 2
 Student Number: 110502567
