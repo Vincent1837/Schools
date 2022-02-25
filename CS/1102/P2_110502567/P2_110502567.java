@@ -29,6 +29,5 @@ public class P2_110502567{
             System.out.println("An error occurred.");
             ex.printStackTrace();
         }
-
     }
 }
