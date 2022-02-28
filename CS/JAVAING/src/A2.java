@@ -7,6 +7,7 @@ public class A2 {
         Scanner sc = new Scanner(System.in);
         String inputString = sc.nextLine();
         vowelCounter(inputString);
+        sc.close();
     }
     private static void vowelCounter(String str) {
         char[] loweredStr = str.toLowerCase(Locale.ROOT).toCharArray();

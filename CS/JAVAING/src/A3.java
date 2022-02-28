@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSInput;
-
 import java.util.ArrayList;
 import java.util.*;
 
@@ -15,7 +13,7 @@ public class A3 {
                 System.out.println(i + " " + isPrime(i));
             }
         }
-
+        sc.close();
     }
     private static ArrayList<Integer> findFactors(int num){
         ArrayList<Integer> factors = new ArrayList<>();
