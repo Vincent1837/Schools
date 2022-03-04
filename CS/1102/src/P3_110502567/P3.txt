@@ -1,0 +1,14 @@
+class Student {
+    // do something here
+}
+
+public class P00000 {
+    public static void main(String[] args) {
+        // 以下不要改
+        Student putin = new Student("Putin", 59);
+        System.out.println(putin.getName() + " before: " + putin.getScore());
+        putin.changeScore(40);
+        System.out.println(putin.getName() + " after: " + putin.getScore());
+//        putin.score = 100;
+    }
+}
