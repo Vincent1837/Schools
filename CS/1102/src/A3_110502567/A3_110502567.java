@@ -1,9 +1,10 @@
+/**
+ * Assignment 3
+ * Student Number: 110502567
+ * Course: CE_1002
+ */
 package A3_110502567;
-/*
-Assignment 3
-Student Number: 110502567
-Course: CE_1002
-*/
+
 import java.util.Vector;
 
 public class A3_110502567 {
@@ -17,7 +18,7 @@ public class A3_110502567 {
     static private String iSBN2="278-33-4-133238-0";
     static Vector<String> CONTENT2= new Vector<>();
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         CONTENT1.add("book1p1");
         CONTENT1.add("book1p2");
         CONTENT1.add("book1p3");

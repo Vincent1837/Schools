@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e484db98-47db-4663-b67f-6ef99f83b6cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVAING.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAVAING/A2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/A2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/A3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1101/PPTX/1101作業03.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../1101/PPTX/1101作業03.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/A6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Engineering_Mathematics/Engingeering_Mathematics_HW1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1102/src/A3_110502567/A3_110502567.java" beforeDir="false" afterPath="$PROJECT_DIR$/../1102/src/A3_110502567/A3_110502567.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/A2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/A2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.A3">
+  <component name="RunManager" selected="Application.A6">
     <configuration name="A2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2" />
       <module name="JAVAING" />
@@ -63,8 +60,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A6" />
+      <module name="JAVAING" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A6" />
         <item itemvalue="Application.A3" />
         <item itemvalue="Application.A2" />
       </list>

@@ -15,7 +15,7 @@ public class A3 {
         }
         sc.close();
     }
-    private static ArrayList<Integer> findFactors(int num){
+    private static ArrayList<Integer> findFactors (int num){
         ArrayList<Integer> factors = new ArrayList<>();
         for (int i = 1; i < Math.sqrt(num); i++){
             if (num % i == 0){
@@ -26,7 +26,7 @@ public class A3 {
         }
         return factors;
     }
-    private static String isPrime(int num){
+    private static String isPrime (int num){
         if (num == 1){
             return "False";
         }
