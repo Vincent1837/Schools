@@ -13,5 +13,6 @@ public class P1_110502567 {
         studentID = sc.nextLine();
         System.out.println("Hello World!!!");
         System.out.println("I'm " + studentName + " and my student ID is " + studentID + '.');
+        sc.close();
     }
 }
