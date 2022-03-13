@@ -1,40 +1,30 @@
-from math import e , log
-from numpy import cos, pi, sin
-from numpy.core.function_base import linspace
+import numpy
+import pylab
 
-def f(x):
-    return 7**cos(x)*sin(x)
+def factorial(n):
+    f = 1
+    for i in range(2, n + 1):
+        f *= i
+    return f
 
-isum = 7/log(7, e) - 1/log(7, e)
+def taylorPloy(n, m):
+    s = 0
+    for k in range(n):
+        s += ((-1)**(k) * m**(k + 1)) / factorial(k)
+    return s
 
-x , dx= linspace(0,pi/2,101,retstep=True)
+x = numpy.linspace(0, 10.5, 100)
+n = 20
 
-y = [f(i) for i in x]
+for i in range(1, n+1):
+    y = taylorPloy(i, x)
+    pylab.plot(x, y, label='p'+str(i))
+pylab.plot(x, x*pylab.exp(-x), label="xexp(-x)")
 
-rsum, lsum, usum, tsum = 0, 0, 0, 0
-
-for i in range(0, len(y)-1):
-    rsum += y[i]
-    lsum += min(y[i],y[i+1])
-    usum += max(y[i],y[i+1])
-    tsum += y[i]+y[i+1]
-rsum -= y[0]
-
-rsum *= dx
-lsum *= dx
-usum *= dx
-tsum *= dx/2
-
-print(f"{'數學積分':8s} : {isum:.9f}\n\n")
-print("迴圈求積:")
-print(f"{'矩陣積分':8s}  : {rsum:.9f} 誤差: {abs(isum-rsum):<.10f}")
-print(f"{'上矩形積分':8s} : {usum:.9f} 誤差: {abs(isum-usum):<.10f}")
-print(f"{'下矩形積分':8s} : {lsum:.9f} 誤差: {abs(isum-lsum):<.10f}")
-print(f"{'梯形積分法':8s} : {tsum:.9f} 誤差: {abs(isum-tsum):<.10f}\n\n")
-isum1 = dx * sum(y[:-1])
-isum2 = dx * sum([y[0], 2*sum(y[1:-1]), y[-1]])/2
-isum3 = dx * sum([y[0],8*sum(y[1:-1:2]), 2*sum(y[2:-1:2]), y[-1]])/3
-print("公式求積:")
-print(f"{'矩形積分法':8s} : {isum1:<.9f} 誤差: {abs(isum-isum1):<.10f}")
-print(f"{'梯形積分法':8s} : {isum2:<.9f} 誤差: {abs(isum-isum2):<.10f}")
-print(f"{'Simpson積分':8s} : {isum3:<.9f} 誤差: {abs(isum-isum3):<.10f}")
+pylab.title("Taylor ploynomials with different orders for x exp(-x)")
+pylab.xlabel("x")
+pylab.ylabel("y")
+pylab.grid()
+pylab.legend()
+pylab.ylim(-2, 3)
+pylab.show()
