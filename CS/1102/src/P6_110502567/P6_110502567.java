@@ -55,6 +55,7 @@ public class P6_110502567 {
                 sortedBookShelf.add(book);
             }
         }
+        sc.close();
         System.out.print(sortedBookShelf);
     }
 }

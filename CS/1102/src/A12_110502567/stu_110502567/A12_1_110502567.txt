@@ -1,0 +1,649 @@
+<!doctype html>
+<html> 
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>國立中央大學資訊工程學系</title> 
+  <meta name="keywords" content="中央資工, NCUCSIE, 國立中央大學資訊工程學系"> 
+  <meta name="description" content="國立中央大學資訊工程學系網站，提供系所介紹、系所公告、招生資訊、課程內容、檔案下載、學生專區、高中生專區等資訊。"> 
+  <meta name="author" content="Yang Sheng-Han, Huang Yu-Kai, Cheng Hsing-Chien"> 
+  <meta name="viewport" content="width=device-width"> <!--[if lt IE 9]>
+        <meta http-equiv="refresh" content="0;url=/legacybrowser" />
+    <![endif]--> 
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" type="text/css"> 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css"> 
+  <link href="//cdn.jsdelivr.net/jquery.owlcarousel/1.31/owl.carousel.css" rel="stylesheet" type="text/css"> 
+  <link href="/statics/style.css" rel="stylesheet" type="text/css"> 
+  <link rel="icon" href="//www.csie.ncu.edu.tw/images/csie_logo.ico" type="image/ico"> 
+ </head> 
+ <body> 
+  <nav class="navbar navbar-default navbar-fixed-top"> 
+   <div class="container"> 
+    <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="/" title="首頁" style="float:left;" class="logo"> <img src="https://www.csie.ncu.edu.tw/images/logo.png" alt="中央資工" width="100%"> </a> 
+    </div> 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+     <div class="navbar-search"> 
+      <form id="searchform" class="input-group" action="/search"> 
+       <input type="hidden" name="cx" value="017674198963524749682:lwfstdyk6wi"> 
+       <input type="hidden" name="ie" value="UTF-8"> 
+       <input type="text" value="" name="q" id="q" placeholder="搜尋" class="form-control" autocomplete="off"> <span class="input-group-btn"> <button type="submit" id="searchsubmit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button> </span> 
+      </form> 
+     </div> 
+     <div id="main-navigation" class="navbar-inner">
+      <ul class="nav navbar-nav">
+       <li class="dropdown"><a class="dropdown-toggle" title="首頁" href="/">首頁</a></li>
+       <li class="dropdown"><a class="dropdown-toggle" title="系所介紹" href="/department">系所介紹</a>
+        <ul class="dropdown-menu">
+         <li><a class="dropdown-toggle" title="系所簡介" href="/department/introduction">系所簡介</a></li>
+         <li><a class="dropdown-toggle" title="成員簡介" href="/department/member">成員簡介</a></li>
+         <li><a class="dropdown-toggle" title="研究領域" href="/department/area">研究領域</a></li>
+         <li><a class="dropdown-toggle" title="實驗室簡介" href="/department/lab">實驗室簡介</a></li>
+        </ul></li>
+       <li class="dropdown"><a class="dropdown-toggle" title="招生資訊" href="/admission">招生資訊</a>
+        <ul class="dropdown-menu">
+         <li><a class="dropdown-toggle" title="大學部" href="/admission/undergraduate">大學部</a></li>
+         <li><a class="dropdown-toggle" title="碩士班" href="/admission/master">碩士班</a></li>
+         <li><a class="dropdown-toggle" title="博士班" href="/admission/phd">博士班</a></li>
+         <li><a class="dropdown-toggle" title="外籍生" href="/admission/iocs">外籍生</a></li>
+         <li><a class="dropdown-toggle" title="在職班" href="/admission/emis">在職班</a></li>
+        </ul></li>
+       <li class="dropdown"><a class="dropdown-toggle" title="課程內容" href="/course">課程內容</a>
+        <ul class="dropdown-menu">
+         <li><a class="dropdown-toggle" title="大學部" href="/course/undergraduate">大學部</a></li>
+         <li><a class="dropdown-toggle" title="碩士班" href="/course/master">碩士班</a></li>
+         <li><a class="dropdown-toggle" title="博士班" href="/course/phd">博士班</a></li>
+        </ul></li>
+       <li class="dropdown"><a class="dropdown-toggle" title="檔案下載" href="/downloads">檔案下載</a></li>
+       <li class="dropdown"><a class="dropdown-toggle" title="風雲榜" href="/students">風雲榜</a></li>
+       <li class="dropdown"><a class="dropdown-toggle" title="學生專區" href="/information">學生專區</a>
+        <ul class="dropdown-menu">
+         <li><a class="dropdown-toggle" title="課程設計" href="/information/course">課程設計</a></li>
+         <li><a class="dropdown-toggle" title="專業師資" href="/information/research">專業師資</a></li>
+         <li><a class="dropdown-toggle" title="畢業生就業流向" href="/information/future">畢業生就業流向</a></li>
+         <li><a class="dropdown-toggle" title="入學資訊" href="/information/regulation">入學資訊</a></li>
+         <li><a class="dropdown-toggle" title="招生資訊" href="/information/admission">招生資訊</a></li>
+        </ul></li>
+      </ul>
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <div id="main-carousel" class="owl-carousel"> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_0.png" alt="slide_0.png" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_1.png" alt="slide_1.png" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_3.jpg" alt="slide_3.jpg" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_5.jpg" alt="slide_5.jpg" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_6.jpg" alt="slide_6.jpg" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_7.png" alt="slide_7.png" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_8.png" alt="slide_8.png" width="100%" draggable="false"> </a> 
+    </div> 
+    <div> <a> <img src="https://www.csie.ncu.edu.tw/images/slide/slide_9.png" alt="slide_9.png" width="100%" draggable="false"> </a> 
+    </div> 
+   </div> 
+   <div class="content"> 
+    <div class="row"> 
+     <div class="col-xs-12 col"> 
+      <div class="card card-blue card-list card-index-news"> 
+       <div style="overflow: hidden;"> 
+        <h3 class="list-title">焦點新聞</h3> <a class="btn-material btn-more" href="/announcement/tags/焦點新聞" title="更多"> 更多 </a> 
+       </div> 
+       <hr> 
+       <div class="row index-news-row"> <a class="col-xs-12 col-sm-6 col-md-4 link" href="/announcement/1ae9e5c56ea7692436b7e85c946d0e97" title="賀！吳曉光教授榮獲科技部工程司110年度產學合作計畫線上成果發表暨績效考評會電子資通領域應用型計畫簡報組特優獎"> 
+         <div class="hero-image"> 
+          <img class="img-fit" src="/file/4363619130508edaf052aa64222c0809" alt="賀！吳曉光教授榮獲科技部工程司110年度產學合作計畫線上成果發表暨績效考評會電子資通領域應用型計畫簡報組特優獎"> 
+         </div> <h4>賀！吳曉光教授榮獲科技部工程司110年度產學合作計畫線上成果發表暨績效考評會電子資通領域應用型計畫簡報組特優獎</h4> <p class="index-news-abbreviation">吳曉光教授執行「為入門學生設計之提升程式能力新世代物聯網學習平台計畫」榮獲科技部工程司110年度產學合作計畫線上成果發表暨績效考評會電子資通領域應用型計畫簡報組特優獎！ - 得獎名單：[https://reurl.cc/mGveLG][1] [1]: https://reurl.cc/mGveLG</p> </a> <a class="hidden-xs col-sm-6 col-md-4 link" href="/announcement/85d0475deb4f49c6af573832821b0cfa" title="賀！蘇柏齊教授指導研究室團隊參加2021 IEEE (AIVR 2021) Visual Attention Estimation in HMD 競賽榮獲冠軍"> 
+         <div class="hero-image"> 
+          <img class="img-fit" src="/file/59860402277eafd05fd36fefba1ed9ad" alt="賀！蘇柏齊教授指導研究室團隊參加2021 IEEE (AIVR 2021) Visual Attention Estimation in HMD 競賽榮獲冠軍"> 
+         </div> <h4>賀！蘇柏齊教授指導研究室團隊參加2021 IEEE (AIVR 2021) Visual Attention Estimation in HMD 競賽榮獲冠軍</h4> <p class="index-news-abbreviation">蘇柏齊教授指導實驗室團隊碩士班曹鈞同學參加 2021 IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR 2021) Visual Attention Estimation in HMD 競賽榮獲冠軍！ **獎金1,500元美金，深度學習模型預測最高準確度再加碼獎金600元！** - 活動官網：[https://ieee-aivr.cs.nthu.edu.tw/][1] ![enter image description here][2] [1]: https://ieee-aivr.cs.nthu.edu.tw/ [2]: /file/a6817ac9ea880df662cf8f164f18bb81</p> </a> <a class="hidden-sm col-md-4 link" href="/announcement/196b05fe72fb6865f758095c4e767488" title="賀！陳慶瀚教授參加2021台灣創新技術博覽會發明競賽榮獲金牌獎"> 
+         <div class="hero-image"> 
+          <img class="img-fit" src="/file/752f6beec6366583b664eafab8a9b68c" alt="賀！陳慶瀚教授參加2021台灣創新技術博覽會發明競賽榮獲金牌獎"> 
+         </div> <h4>賀！陳慶瀚教授參加2021台灣創新技術博覽會發明競賽榮獲金牌獎</h4> <p class="index-news-abbreviation">陳慶瀚教授參加2021台灣創新技術博覽會發明競賽以「多微控制器系統、物聯網閘道系統、以及基於橋接器的多微控制器系統之控制方法」榮獲金牌獎！ - 活動官網：[https://www.inventaipei.com.tw/zh-tw/index.html][1] - 得獎名單：[https://reurl.cc/Q652LM][2] [1]: https://www.inventaipei.com.tw/zh-tw/index.html [2]: https://reurl.cc/Q652LM</p> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-xs-12 col"> 
+      <div class="card card-list card-blue"> 
+       <div class="row"> 
+        <div class="hidden-xs hidden-sm col-md-3 index-side-nav"> <!-- For devices larger than phones --> 
+         <ul class="nav nav-pills nav-stacked"> 
+          <li class="announcement-category" data-category-tag="得獎訊息"> <a>得獎訊息</a> </li> 
+          <li class="announcement-category" data-category-tag="徵才訊息"> <a>徵才訊息</a> </li> 
+          <li class="announcement-category" data-category-tag="招生快訊"> <a>招生快訊</a> </li> 
+          <li class="announcement-category" data-category-tag="演講公告"> <a>演講公告</a> </li> 
+          <li class="announcement-category" data-category-tag="活動快訊"> <a>活動快訊</a> </li> 
+          <li class="announcement-category" data-category-tag="課程訊息"> <a>課程訊息</a> </li> 
+          <li class="announcement-category" data-category-tag="系辦公告"> <a>系辦公告</a> </li> 
+         </ul> 
+        </div> 
+        <div class="col-xs-12 col-md-9"> <!-- For phones --> 
+         <ul class="visible-xs visible-sm nav nav-pills" style="margin-bottom:20px;"> 
+          <li class="announcement-category" data-category-tag="得獎訊息"> <a>得獎訊息</a> </li> 
+          <li class="announcement-category" data-category-tag="徵才訊息"> <a>徵才訊息</a> </li> 
+          <li class="announcement-category" data-category-tag="招生快訊"> <a>招生快訊</a> </li> 
+          <li class="announcement-category" data-category-tag="演講公告"> <a>演講公告</a> </li> 
+          <li class="announcement-category" data-category-tag="活動快訊"> <a>活動快訊</a> </li> 
+          <li class="announcement-category" data-category-tag="課程訊息"> <a>課程訊息</a> </li> 
+          <li class="announcement-category" data-category-tag="系辦公告"> <a>系辦公告</a> </li> 
+         </ul> 
+         <div class="announcement-scope" data-scope-tag="得獎訊息"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">得獎訊息</h3> <a href="/announcement/category/得獎訊息" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" style="color:red;" href="/announcement/a70912ec3fa5bb1602fd12e826db73c9" title="【獎狀領取】1102學期書卷獎(1101學期成績優異)得獎名單"> 
+           <div class="item-title">
+            【獎狀領取】1102學期書卷獎(1101學期成績優異)得獎名單
+           </div> 
+           <div class="item-time">
+            2022-04-01
+           </div> </a> <a class="link" href="/announcement/a01b1d417a6d777ce9294ea9a38d4282" title="資工系巴哈姆特獎學金1102學期獲獎名單"> 
+           <div class="item-title">
+            資工系巴哈姆特獎學金1102學期獲獎名單
+           </div> 
+           <div class="item-time">
+            2022-04-22
+           </div> </a> <a class="link" href="/announcement/33cf63d4a3291f08626735d52d6864cd" title="【獎狀領取】1101學期書卷獎(1092學期成績優異)得獎名單"> 
+           <div class="item-title">
+            【獎狀領取】1101學期書卷獎(1092學期成績優異)得獎名單
+           </div> 
+           <div class="item-time">
+            2022-03-07
+           </div> </a> <a class="link" href="/announcement/1ae9e5c56ea7692436b7e85c946d0e97" title="賀！吳曉光教授榮獲科技部工程司110年度產學合作計畫線上成果發表暨績效考評會電子資通領域應用型計畫簡報組特優獎"> 
+           <div class="item-title">
+            賀！吳曉光教授榮獲科技部工程司110年度產學合作計畫線上成果發表暨績效考評會電子資通領域應用型計畫簡報組特優獎
+           </div> 
+           <div class="item-time">
+            2022-01-14
+           </div> </a> <a class="link" href="/announcement/0218d9f7675c5a89c69e5f49faf08168" title="110學年度本校優秀大學生留校繼續就讀研究所獎勵"> 
+           <div class="item-title">
+            110學年度本校優秀大學生留校繼續就讀研究所獎勵
+           </div> 
+           <div class="item-time">
+            2021-12-09
+           </div> </a> <a class="link" href="/announcement/47186f3711524dafecaa48363d6ab811" title="資工系巴哈姆特獎學金1101學期獲獎名單"> 
+           <div class="item-title">
+            資工系巴哈姆特獎學金1101學期獲獎名單
+           </div> 
+           <div class="item-time">
+            2021-12-09
+           </div> </a> <a class="link" href="/announcement/85d0475deb4f49c6af573832821b0cfa" title="賀！蘇柏齊教授指導研究室團隊參加2021 IEEE (AIVR 2021) Visual Attention Estimation in HMD 競賽榮獲冠軍"> 
+           <div class="item-title">
+            賀！蘇柏齊教授指導研究室團隊參加2021 IEEE (AIVR 2021) Visual Attention Estimation in HMD 競賽榮獲冠軍
+           </div> 
+           <div class="item-time">
+            2021-12-06
+           </div> </a> <a class="link" href="/announcement/196b05fe72fb6865f758095c4e767488" title="賀！陳慶瀚教授參加2021台灣創新技術博覽會發明競賽榮獲金牌獎"> 
+           <div class="item-title">
+            賀！陳慶瀚教授參加2021台灣創新技術博覽會發明競賽榮獲金牌獎
+           </div> 
+           <div class="item-time">
+            2021-10-21
+           </div> </a> <a class="link" href="/announcement/205ed26442273c45468421c0427174ca" title="賀！蔡宗翰教授指導研究室團隊參加第九屆BioASQ國際級競賽衛冕冠軍"> 
+           <div class="item-title">
+            賀！蔡宗翰教授指導研究室團隊參加第九屆BioASQ國際級競賽衛冕冠軍
+           </div> 
+           <div class="item-time">
+            2021-10-20
+           </div> </a> <a class="link" href="/announcement/13a912918c5905121b64d7b62df902d5" title="賀！大學部方廷宇同學參加Asian Cyber Security Challenge資安競賽榮獲第五名"> 
+           <div class="item-title">
+            賀！大學部方廷宇同學參加Asian Cyber Security Challenge資安競賽榮獲第五名
+           </div> 
+           <div class="item-time">
+            2021-10-20
+           </div> </a> 
+         </div> 
+         <div class="announcement-scope" data-scope-tag="徵才訊息"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">徵才訊息</h3> <a href="/announcement/category/徵才訊息" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" style="color:red;" href="/announcement/46c655cf03353209e33be8576f6031cc" title="職涯發展中心活動報名取消機制"> 
+           <div class="item-title">
+            職涯發展中心活動報名取消機制
+           </div> 
+           <div class="item-time">
+            2022-05-11
+           </div> </a> <a class="link" style="color:red;" href="/announcement/b86d4caadb22a264fb89d3a89ce91937" title="國立中央大學資訊工程學系 誠徵專任助理教授"> 
+           <div class="item-title">
+            國立中央大學資訊工程學系 誠徵專任助理教授
+           </div> 
+           <div class="item-time">
+            2021-09-14
+           </div> </a> <a class="link" href="/announcement/3ffde4b5a6761d255e4d40ac728014fe" title="【Intel Taiwan線上校園講座最終場】5月18日"> 
+           <div class="item-title">
+            【Intel Taiwan線上校園講座最終場】5月18日
+           </div> 
+           <div class="item-time">
+            2022-05-16
+           </div> </a> <a class="link" href="/announcement/ed95d57307120a0565468b043e3b8689" title="企管系曹壽民教授徵求工讀生"> 
+           <div class="item-title">
+            企管系曹壽民教授徵求工讀生
+           </div> 
+           <div class="item-time">
+            2022-05-03
+           </div> </a> <a class="link" href="/announcement/d44838c0c845afb1de3882076e3f784c" title="【台積電IT暑期實習生招募】"> 
+           <div class="item-title">
+            【台積電IT暑期實習生招募】
+           </div> 
+           <div class="item-time">
+            2022-04-12
+           </div> </a> <a class="link" href="/announcement/d1061d431839df00b78ee9dbbe04fae2" title="【第19屆台灣微軟未來生涯體驗計劃】4月20日止 "> 
+           <div class="item-title">
+            【第19屆台灣微軟未來生涯體驗計劃】4月20日止 
+           </div> 
+           <div class="item-time">
+            2022-04-11
+           </div> </a> <a class="link" href="/announcement/83562ddbe7809857b665796132fd1093" title="【NVIDIA校園徵才線上說明會｜Physical Design/CAD專場】"> 
+           <div class="item-title">
+            【NVIDIA校園徵才線上說明會｜Physical Design/CAD專場】
+           </div> 
+           <div class="item-time">
+            2022-04-08
+           </div> </a> <a class="link" href="/announcement/0b5928452801f899eff085af9e2cc5fd" title="【聯詠科技校園徵才】"> 
+           <div class="item-title">
+            【聯詠科技校園徵才】
+           </div> 
+           <div class="item-time">
+            2022-04-07
+           </div> </a> <a class="link" href="/announcement/b567e6b313e03f77c9417bce6dbb4b16" title="【NVIDIA校園招募｜Software CAD Engineer】"> 
+           <div class="item-title">
+            【NVIDIA校園招募｜Software CAD Engineer】
+           </div> 
+           <div class="item-time">
+            2022-04-06
+           </div> </a> <a class="link" href="/announcement/e522ea7e259cd490569e60418e078048" title="【實習徵才】滴巴格數位整合-助理工程師職缺資訊"> 
+           <div class="item-title">
+            【實習徵才】滴巴格數位整合-助理工程師職缺資訊
+           </div> 
+           <div class="item-time">
+            2022-03-31
+           </div> </a> 
+         </div> 
+         <div class="announcement-scope" data-scope-tag="招生快訊"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">招生快訊</h3> <a href="/announcement/category/招生快訊" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" style="color:red;" href="/announcement/e60e9c1819bc943253dcb45b055ef866" title="111學年度碩班考試一般組、軟工碩班、AI碩班備取報到意願名單公告"> 
+           <div class="item-title">
+            111學年度碩班考試一般組、軟工碩班、AI碩班備取報到意願名單公告
+           </div> 
+           <div class="item-time">
+            2022-03-10
+           </div> </a> <a class="link" href="/announcement/5e2758d6ffb48fd5d73b74a8874d11d0" title="111學年度資工系碩士班考試入學第十梯備取報到通知-一般組"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第十梯備取報到通知-一般組
+           </div> 
+           <div class="item-time">
+            2022-05-18
+           </div> </a> <a class="link" href="/announcement/48918ec4ffd09ed94d2fa6b1daab3099" title="111學年度資工系碩士班考試入學第十梯備取報到通知-軟工碩士班"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第十梯備取報到通知-軟工碩士班
+           </div> 
+           <div class="item-time">
+            2022-05-18
+           </div> </a> <a class="link" href="/announcement/253cafe77fa6909ae9f88252612e53be" title="111學年度資工系碩士班考試入學第十梯備取報到通知-AI碩士班"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第十梯備取報到通知-AI碩士班
+           </div> 
+           <div class="item-time">
+            2022-05-18
+           </div> </a> <a class="link" href="/announcement/c4c53108eea0bea70f120e7d816910d4" title="111博班考試錄取名單已公告"> 
+           <div class="item-title">
+            111博班考試錄取名單已公告
+           </div> 
+           <div class="item-time">
+            2022-05-13
+           </div> </a> <a class="link" href="/announcement/b0b8eb99f7f158ed0210a68ea2f0b27f" title="111學年度資工系碩士班考試入學第九梯備取報到通知-一般組"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第九梯備取報到通知-一般組
+           </div> 
+           <div class="item-time">
+            2022-05-11
+           </div> </a> <a class="link" href="/announcement/94c61d0f0d5510908879e77fd74d44f9" title="111學年度資工系碩士班考試入學第九梯備取報到通知-軟工碩士班"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第九梯備取報到通知-軟工碩士班
+           </div> 
+           <div class="item-time">
+            2022-05-11
+           </div> </a> <a class="link" href="/announcement/995ccf537799ee9b01382ff1dc91bbd2" title="111學年度資工系碩士班考試入學第九梯備取報到通知-AI碩士班"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第九梯備取報到通知-AI碩士班
+           </div> 
+           <div class="item-time">
+            2022-05-11
+           </div> </a> <a class="link" href="/announcement/6f8024e3381deeea5f25e5982cfdfb48" title="111學年度資工系碩士班考試入學第八梯備取報到通知-一般組"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第八梯備取報到通知-一般組
+           </div> 
+           <div class="item-time">
+            2022-05-04
+           </div> </a> <a class="link" href="/announcement/75acd0cbe6250e0b757e14cd26232fdb" title="111學年度資工系碩士班考試入學第八梯備取報到通知-軟工碩士班"> 
+           <div class="item-title">
+            111學年度資工系碩士班考試入學第八梯備取報到通知-軟工碩士班
+           </div> 
+           <div class="item-time">
+            2022-05-04
+           </div> </a> 
+         </div> 
+         <div class="announcement-scope" data-scope-tag="演講公告"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">演講公告</h3> <a href="/announcement/category/演講公告" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" href="/announcement/2c9bb10a52bcbdc479729b790c5a0cdc" title="【資電院週會】5月31日（二）曹筱筠組長（財團法人崔媽媽基金會法務組）"> 
+           <div class="item-title">
+            【資電院週會】5月31日（二）曹筱筠組長（財團法人崔媽媽基金會法務組）
+           </div> 
+           <div class="item-time">
+            2022-05-16
+           </div> </a> <a class="link" href="/announcement/7e6ed1bde53fe14820ca3b2e02977a00" title="【書報討論】5月18日(三）吳廸融  博士後研究員 (國立陽明交大資工系)"> 
+           <div class="item-title">
+            【書報討論】5月18日(三）吳廸融 博士後研究員 (國立陽明交大資工系)
+           </div> 
+           <div class="item-time">
+            2022-05-13
+           </div> </a> <a class="link" href="/announcement/31ee100b91fe865d033f951d8948bb7b" title="【書報討論】5月11日(三）曾煜棋 終身講座教授（國立陽明交通大學 資訊工程系）"> 
+           <div class="item-title">
+            【書報討論】5月11日(三）曾煜棋 終身講座教授（國立陽明交通大學 資訊工程系）
+           </div> 
+           <div class="item-time">
+            2022-05-05
+           </div> </a> <a class="link" href="/announcement/7ee27865c50d4024b95608677dac466a" title="【書報討論】5月4日(三）張英豪 技術協理 ( 趨勢科技  )"> 
+           <div class="item-title">
+            【書報討論】5月4日(三）張英豪 技術協理 ( 趨勢科技 )
+           </div> 
+           <div class="item-time">
+            2022-04-28
+           </div> </a> <a class="link" href="/announcement/be5cdb16342c88a28646f151176d77e4" title="【書報討論】4月27日(三）龎景德 總監 ( 緯穎科技 資深軟體開發總監 )"> 
+           <div class="item-title">
+            【書報討論】4月27日(三）龎景德 總監 ( 緯穎科技 資深軟體開發總監 )
+           </div> 
+           <div class="item-time">
+            2022-04-25
+           </div> </a> <a class="link" href="/announcement/746a277cb09136badba5567e2a8e9589" title="【專題演講】4月26日（二） 張晏瑞 先生 (台灣大學-IBM量子電腦中心)"> 
+           <div class="item-title">
+            【專題演講】4月26日（二） 張晏瑞 先生 (台灣大學-IBM量子電腦中心)
+           </div> 
+           <div class="item-time">
+            2022-04-22
+           </div> </a> <a class="link" href="/announcement/8fa2433b24de426745942ec895af89ef" title="【書報討論】4月20日(三）許健平   講座教授  (  國立清華大學 資訊工程學系   ) "> 
+           <div class="item-title">
+            【書報討論】4月20日(三）許健平 講座教授 ( 國立清華大學 資訊工程學系 ) 
+           </div> 
+           <div class="item-time">
+            2022-04-15
+           </div> </a> <a class="link" href="/announcement/a10368219505a275fb5932267eeecedb" title="【書報討論】3月30日(三）蔡東宏 經理( Garmin 研發中心-軟體工程處 )"> 
+           <div class="item-title">
+            【書報討論】3月30日(三）蔡東宏 經理( Garmin 研發中心-軟體工程處 )
+           </div> 
+           <div class="item-time">
+            2022-03-24
+           </div> </a> <a class="link" href="/announcement/e11ac59416a82680e16603dc38a1e50b" title="【書報討論】3月23日(三）李大衛 助理教授  ( 銘傳大學國際學院資訊科技應用與管理學位學程）"> 
+           <div class="item-title">
+            【書報討論】3月23日(三）李大衛 助理教授 ( 銘傳大學國際學院資訊科技應用與管理學位學程）
+           </div> 
+           <div class="item-time">
+            2022-03-17
+           </div> </a> <a class="link" href="/announcement/5f2cba354dcc113a6d78714dc57d432e" title="【書報討論】3月16日(三）陳建弘 執行長 ( 巴哈姆特創辦人 )"> 
+           <div class="item-title">
+            【書報討論】3月16日(三）陳建弘 執行長 ( 巴哈姆特創辦人 )
+           </div> 
+           <div class="item-time">
+            2022-03-09
+           </div> </a> 
+         </div> 
+         <div class="announcement-scope" data-scope-tag="活動快訊"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">活動快訊</h3> <a href="/announcement/category/活動快訊" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" href="/announcement/6d1a03c489ebfa92f15a02803c24e6d7" title="【Global AI Bootcamp - AI產品實作營】"> 
+           <div class="item-title">
+            【Global AI Bootcamp - AI產品實作營】
+           </div> 
+           <div class="item-time">
+            2022-04-29
+           </div> </a> <a class="link" href="/announcement/3ab91b8bf7da4c579abeffceceb15e76" title="【啟發式資安初階攻防演練My First CTF競賽】"> 
+           <div class="item-title">
+            【啟發式資安初階攻防演練My First CTF競賽】
+           </div> 
+           <div class="item-time">
+            2022-04-21
+           </div> </a> <a class="link" href="/announcement/87080a171fee3209aae6ed9fa2690939" title="【AIS3新型態資安暑期課程】"> 
+           <div class="item-title">
+            【AIS3新型態資安暑期課程】
+           </div> 
+           <div class="item-time">
+            2022-04-19
+           </div> </a> <a class="link" href="/announcement/0a03ef32c6df03be32eb1db0e488aafd" title="【YouthRocks新創職涯校園分享會】4月19日"> 
+           <div class="item-title">
+            【YouthRocks新創職涯校園分享會】4月19日
+           </div> 
+           <div class="item-time">
+            2022-04-18
+           </div> </a> <a class="link" href="/announcement/1beb46fd08de3c612a2bf439500d7b06" title="「5G＋產業新星揚帆啟航計畫」企業實習(有提供津貼)，申請日期至4/15"> 
+           <div class="item-title">
+            「5G＋產業新星揚帆啟航計畫」企業實習(有提供津貼)，申請日期至4/15
+           </div> 
+           <div class="item-time">
+            2022-04-06
+           </div> </a> <a class="link" href="/announcement/a3585cd120f5a75ad8890c31339b18f1" title="網學所教育創新與科技研究室-活動訊息"> 
+           <div class="item-title">
+            網學所教育創新與科技研究室-活動訊息
+           </div> 
+           <div class="item-time">
+            2022-03-30
+           </div> </a> <a class="link" href="/announcement/ae7a4f96fd4b398f082a78f0885f81f0" title="EC-Council CEH 駭客技術專家認證課程"> 
+           <div class="item-title">
+            EC-Council CEH 駭客技術專家認證課程
+           </div> 
+           <div class="item-time">
+            2022-03-21
+           </div> </a> <a class="link" href="/announcement/9cb8c68f27846dc2f4b97bd1bbc8bd3c" title="【台積電女力對談｜跨越時間，遇見妳】"> 
+           <div class="item-title">
+            【台積電女力對談｜跨越時間，遇見妳】
+           </div> 
+           <div class="item-time">
+            2022-03-16
+           </div> </a> <a class="link" href="/announcement/e904b0a458b2e03109acb4dba21f455c" title="陽明交通陽明大學辦理「EC-Council CEH 駭客技術專家認證課程」"> 
+           <div class="item-title">
+            陽明交通陽明大學辦理「EC-Council CEH 駭客技術專家認證課程」
+           </div> 
+           <div class="item-time">
+            2022-03-15
+           </div> </a> <a class="link" href="/announcement/03e9dfc98f751c09e9377f69e8790501" title="【2022 GiCS 第二屆尋找資安女婕思】"> 
+           <div class="item-title">
+            【2022 GiCS 第二屆尋找資安女婕思】
+           </div> 
+           <div class="item-time">
+            2022-03-10
+           </div> </a> 
+         </div> 
+         <div class="announcement-scope" data-scope-tag="課程訊息"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">課程訊息</h3> <a href="/announcement/category/課程訊息" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" style="color:red;" href="/announcement/00c98da2e353214318b8e7c738b74ec8" title="各學期英語授課清單&amp;畢審規則13000說明"> 
+           <div class="item-title">
+            各學期英語授課清單&amp;畢審規則13000說明
+           </div> 
+           <div class="item-time">
+            2022-03-09
+           </div> </a> <a class="link" style="color:red;" href="/announcement/cf96c5eab734e2f3ab4709b9ce69d528" title="資工系大學部CPE檢定登記"> 
+           <div class="item-title">
+            資工系大學部CPE檢定登記
+           </div> 
+           <div class="item-time">
+            2019-03-05
+           </div> </a> <a class="link" style="color:red;" href="/announcement/480bd709eea815984caa3468ee626706" title="外系生申請本系輔系雙主修作業辦法（106學年度起）"> 
+           <div class="item-title">
+            外系生申請本系輔系雙主修作業辦法（106學年度起）
+           </div> 
+           <div class="item-time">
+            2017-08-02
+           </div> </a> <a class="link" style="color:red;" href="/announcement/d2c1bc1dd43f201f8a081afc2c80ad5b" title="碩士班研究生修業辦法修訂(106學年度入學適用)"> 
+           <div class="item-title">
+            碩士班研究生修業辦法修訂(106學年度入學適用)
+           </div> 
+           <div class="item-time">
+            2017-08-02
+           </div> </a> <a class="link" style="color:red;" href="/announcement/141757d20a1100bef68e0f01bf44f8ed" title="104大一國文改革重要資訊，請大二以上重、補修生特別注意!!"> 
+           <div class="item-title">
+            104大一國文改革重要資訊，請大二以上重、補修生特別注意!!
+           </div> 
+           <div class="item-time">
+            2015-01-28
+           </div> </a> <a class="link" href="/announcement/e7d5189df684a5037f7ff2b2d759e625" title="110-2期末教學評量實施-111年5月16日(一)至111年06月10日(五) 23:59截止"> 
+           <div class="item-title">
+            110-2期末教學評量實施-111年5月16日(一)至111年06月10日(五) 23:59截止
+           </div> 
+           <div class="item-time">
+            2022-05-20
+           </div> </a> <a class="link" href="/announcement/37a0e8908b13361f23b3315f8beb3609" title="110-2期中教學回饋填寫期間4月1日起至4月22日止，"> 
+           <div class="item-title">
+            110-2期中教學回饋填寫期間4月1日起至4月22日止，
+           </div> 
+           <div class="item-time">
+            2022-04-06
+           </div> </a> <a class="link" href="/announcement/2a810777af95201bf32654f00b31e425" title="110學年大學部專題實驗成果展競賽-請於5/6前繳交相關資料"> 
+           <div class="item-title">
+            110學年大學部專題實驗成果展競賽-請於5/6前繳交相關資料
+           </div> 
+           <div class="item-time">
+            2022-03-17
+           </div> </a> <a class="link" href="/announcement/e44a6b84cc282b8fc470c0b2abcc1332" title="110-2學期CPE大學程式能力檢定輔導資訊公告"> 
+           <div class="item-title">
+            110-2學期CPE大學程式能力檢定輔導資訊公告
+           </div> 
+           <div class="item-time">
+            2022-02-16
+           </div> </a> <a class="link" href="/announcement/cb579a1751fb992099b481a1623e2c25" title="請同學務必於02月25日確認選課資料Please confirm your selected course list between Feb25 to Mar2"> 
+           <div class="item-title">
+            請同學務必於02月25日確認選課資料Please confirm your selected course list between Feb25 to Mar2
+           </div> 
+           <div class="item-time">
+            2022-02-16
+           </div> </a> 
+         </div> 
+         <div class="announcement-scope" data-scope-tag="系辦公告"> 
+          <div style="overflow: hidden;"> 
+           <h3 class="list-title">系辦公告</h3> <a href="/announcement/category/系辦公告" title="更多" class="btn-material btn-more"> 更多 </a> 
+          </div> 
+          <hr> <a class="link" style="color:red;" href="/announcement/2af166f8db212441783739e1fc347de2" title="博碩論文繳交講習會(含「論文上傳」線上資源參考)"> 
+           <div class="item-title">
+            博碩論文繳交講習會(含「論文上傳」線上資源參考)
+           </div> 
+           <div class="item-time">
+            2022-05-17
+           </div> </a> <a class="link" style="color:red;" href="/announcement/633acbd71054a98ce253c5493444c7ec" title="【6/23截止】研究生學位考試申請(Oral Defense Process Description)"> 
+           <div class="item-title">
+            【6/23截止】研究生學位考試申請(Oral Defense Process Description)
+           </div> 
+           <div class="item-time">
+            2022-03-16
+           </div> </a> <a class="link" style="color:red;" href="/announcement/dad9b75f2740262bd3acc7d62145e879" title="【轉知】學士服特約廠商相關訊息"> 
+           <div class="item-title">
+            【轉知】學士服特約廠商相關訊息
+           </div> 
+           <div class="item-time">
+            2022-02-14
+           </div> </a> <a class="link" style="color:red;" href="/announcement/cb44c0e764aeecf539a46cf099f78aba" title="【宣導】尚未履行兵役義務役男出國應經申請核准始得出境"> 
+           <div class="item-title">
+            【宣導】尚未履行兵役義務役男出國應經申請核准始得出境
+           </div> 
+           <div class="item-time">
+            2021-12-03
+           </div> </a> <a class="link" style="color:red;" href="/announcement/6ba4d998c2971d9f4efccf0ce16ad030" title="近來發生學生受到強迫推銷，請同學留意狀況"> 
+           <div class="item-title">
+            近來發生學生受到強迫推銷，請同學留意狀況
+           </div> 
+           <div class="item-time">
+            2021-10-07
+           </div> </a> <a class="link" style="color:red;" href="/announcement/d82e9ae7fcfec849b1cc0cb2d0422f15" title="請依規定將單車停放在停車區"> 
+           <div class="item-title">
+            請依規定將單車停放在停車區
+           </div> 
+           <div class="item-time">
+            2015-06-10
+           </div> </a> <a class="link" href="/announcement/a19e61e13a4f2aefa3f84ec43b79daff" title="111學年度本校參與台聯大系統學士班學生轉校注意事項"> 
+           <div class="item-title">
+            111學年度本校參與台聯大系統學士班學生轉校注意事項
+           </div> 
+           <div class="item-time">
+            2022-05-19
+           </div> </a> <a class="link" href="/announcement/24446eb9e771a676eb8f67587e8b141a" title="大學程式能力檢定（2022/05/24 (二) 17:30 ~ 21:40）"> 
+           <div class="item-title">
+            大學程式能力檢定（2022/05/24 (二) 17:30 ~ 21:40）
+           </div> 
+           <div class="item-time">
+            2022-05-10
+           </div> </a> <a class="link" href="/announcement/53b2f00039f0c0499ec46e98a1f2a4ca" title="【5/20(五)前】1102學期第3次博士班著作審查及抵免資格考申請"> 
+           <div class="item-title">
+            【5/20(五)前】1102學期第3次博士班著作審查及抵免資格考申請
+           </div> 
+           <div class="item-time">
+            2022-04-15
+           </div> </a> <a class="link" href="/announcement/15f4552e80134047e9fc7744cd87ad01" title="1102學期博士班資格考(Qualifying Examination)"> 
+           <div class="item-title">
+            1102學期博士班資格考(Qualifying Examination)
+           </div> 
+           <div class="item-time">
+            2022-04-13
+           </div> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="sub-navigation" class="row sec-nav"> 
+    <ul> 
+     <li class="col-xs-12 col-sm-6 col-md-3"> <a title="系友會" href="https://www.facebook.com/groups/124514063939" class="btn-material btn-sec-nav" target="_blank"> <i class="fa margin-right"></i>系友會<span style="float:right;"><i class="fa fa-external-link"></i></span> </a> </li> 
+     <li class="col-xs-12 col-sm-6 col-md-3"> <a title="系學會" href="https://www.facebook.com/NCUCSIE?fref=ts" class="btn-material btn-sec-nav" target="_blank"> <i class="fa margin-right"></i>系學會<span style="float:right;"><i class="fa fa-external-link"></i></span> </a> </li> 
+     <li class="col-xs-12 col-sm-6 col-md-3"> <a title="教室借用" href="https://course.csie.ncu.edu.tw/" class="btn-material btn-sec-nav" target="_blank"> <i class="fa margin-right"></i>教室借用<span style="float:right;"><i class="fa fa-external-link"></i></span> </a> </li> 
+     <li class="col-xs-12 col-sm-6 col-md-3"> <a title="電子報" href="http://www.ceecs.ncu.edu.tw/Academic_Journal.aspx" class="btn-material btn-sec-nav" target="_blank"> <i class="fa margin-right"></i>電子報<span style="float:right;"><i class="fa fa-external-link"></i></span> </a> </li> 
+     <li class="col-xs-12 col-sm-6 col-md-3"> <a title="CSIT 2017" href="http://msp.csie.ncu.edu.tw/CSIT2017/" class="btn-material btn-sec-nav" target="_blank"> <i class="fa margin-right"></i>CSIT 2017<span style="float:right;"><i class="fa fa-external-link"></i></span></a> </li> 
+     <li class="col-xs-12 col-sm-6 col-md-3"> <a title="CSIT 2017" href="https://www.facebook.com/ncu.csie.snmg/" class="btn-material btn-sec-nav" target="_blank"> <i class="fa margin-right"></i>SNMG<span style="float:right;"><i class="fa fa-external-link"></i></span></a> </li> 
+    </ul> 
+   </div> 
+   <div class="col-xs-12 footer">
+     Copyright © 2022 Department of Computer Science &amp; Information Engineering, National Central University.
+    <br> <a href="/copyrights" title="版權宣告">版權宣告</a> | <a href="https://www.csie.ncu.edu.tw/admin" title="後台管理">後台管理</a> | <a href="/contacts" title="聯絡我們">聯絡我們</a> | <a href="/sitemap" title="網站地圖">網站地圖</a> | <a href="https://www.cc.ncu.edu.tw/page/privacy" title="隱私權聲明">隱私權聲明</a> | <i class="fa fa-phone margin-right"></i><a href="tel:+88634227151" title="電話">03-422-7151</a> 分機：35200, 35250-2 &nbsp;|&nbsp;<i class="fa fa-fax margin-right"></i><a href="fax:+886034222681" title="傳真">03-422-2681</a> &nbsp;|&nbsp;<i class="fa fa-envelope margin-right"></i><a href="mailto:ncu4500@ncu.edu.tw" title="電子郵件">ncu4500@ncu.edu.tw</a> &nbsp;|&nbsp;<button type="button" class="btn btn-default btn-xs btn-lang" style="font-size:14px;" data-toggle="modal" data-target="#language-modal"><img src="https://www.csie.ncu.edu.tw/images/flag_roc.png" alt="選擇語言 Choose language" width="24" height="16"></button> 
+   </div> <!-- Language Modal --> 
+   <div class="modal modal-blue fade" id="language-modal"> 
+    <div class="modal-dialog"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">關閉</span></button> 
+       <h4 class="modal-title">選擇語言 Choose language</h4> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="row content" style="margin:0px 15px;"> <a class="col-xs-12 col-sm-6 link language-flag" href="//www.csie.ncu.edu.tw" title="繁體中文(zh-tw)"> <img src="https://www.csie.ncu.edu.tw/images/flag_roc.png" alt="繁體中文(zh-tw)" width="150" height="100"> </a> <a class="col-xs-12 col-sm-6 link language-flag" href="//en.csie.ncu.edu.tw" title="English(en-us)"> <img src="https://www.csie.ncu.edu.tw/images/flag_english.png" alt="English(en-us)" width="150" height="100"> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div><!-- container --> <!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> <!--[if gte IE 9]><!--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!--<![endif]--> 
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  <script src="//cdn.jsdelivr.net/jquery.owlcarousel/1.31/owl.carousel.min.js"></script> 
+  <script src="/statics/script.js"></script> 
+  <script>
+    jQuery.extend({
+        configures: {
+            localeUrl: decodeURIComponent('/locale')
+        }
+    });
+</script>  
+ </body>
+</html>

@@ -1,0 +1,167 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch A12_2_110502567",
+            "request": "launch",
+            "mainClass": "stu_110502567.A12_2_110502567",
+            "projectName": "stu_110502567"
+        },
+        {
+            "type": "java",
+            "name": "Launch P12_110502567",
+            "request": "launch",
+            "mainClass": "P12_110502567.P12_110502567"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication",
+            "request": "launch",
+            "mainClass": "com.example.a10_110502567_2/com.example.a10_110502567_2.HelloApplication",
+            "projectName": "A10_110502567_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication(1)",
+            "request": "launch",
+            "mainClass": "com.example.a11_110502567/stu_110502567.HelloApplication",
+            "projectName": "A11_110502567"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication(2)",
+            "request": "launch",
+            "mainClass": "com.example.p11_110502567/stu_110502567.p11_110502567.HelloApplication",
+            "projectName": "P11_110502567"
+        },
+        {
+            "type": "java",
+            "name": "Launch A10_110502567_1",
+            "request": "launch",
+            "mainClass": "A10_110502567.A10_110502567_1",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication(3)",
+            "request": "launch",
+            "mainClass": "A10_110502567.A10_110502567_2.src.main.java.com.example.a10_110502567_2.HelloApplication",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication(4)",
+            "request": "launch",
+            "mainClass": "A11_110502567.src.main.java.stu_110502567.HelloApplication",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch A1_110502567",
+            "request": "launch",
+            "mainClass": "A1_110502567.A1_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch A2_110502567",
+            "request": "launch",
+            "mainClass": "A2_110502567.A2_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch A3_110502567",
+            "request": "launch",
+            "mainClass": "A3_110502567.A3_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch A4_110502567",
+            "request": "launch",
+            "mainClass": "A4_110502567.A4_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P10_110502567",
+            "request": "launch",
+            "mainClass": "P10_110502567.P10_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication(5)",
+            "request": "launch",
+            "mainClass": "P11_110502567.src.main.java.stu_110502567.p11_110502567.HelloApplication",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P1_110502567",
+            "request": "launch",
+            "mainClass": "P1_110502567.P1_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P2_110502567",
+            "request": "launch",
+            "mainClass": "P2_110502567.P2_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P3_110502567",
+            "request": "launch",
+            "mainClass": "P3_110502567.P3_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P4_110502567",
+            "request": "launch",
+            "mainClass": "P4_110502567.P4_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P5_110502567",
+            "request": "launch",
+            "mainClass": "P5_110502567.P5_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch P6_110502567",
+            "request": "launch",
+            "mainClass": "P6_110502567.P6_110502567",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch E1",
+            "request": "launch",
+            "mainClass": "stu_110502567.E1",
+            "projectName": "src_d336ab4"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "src_d336ab4"
+        }
+    ]
+}
