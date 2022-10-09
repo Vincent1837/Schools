@@ -65,7 +65,7 @@ int getPriority (char c) {
 int main() {
 
     struct stack *operatorStack = newStack(50);
-    push(operatorStack, '\0');
+    push(operatorStack, 'b'); // bottom of the stack
     char infixStr[50];
     scanf("%s", infixStr);
     int length = (int)strlen(infixStr);
@@ -94,15 +94,18 @@ int main() {
         }
     }
 
+
     while (!isEmpty(operatorStack)) {
-        printf("%c", peek(operatorStack));
         push(prefixStack, pop(operatorStack));
+	if (size(operatorStack) == 1) {
+    	pop(operatorStack); // pop('b')
+	}
     }
 
+    // prefixStack -> prefixStr
     int loopCount = 0;
     while (!isEmpty(prefixStack)) {
-        prefixStr[loopCount++] = pop(prefixStack);
-        printf("%d\n", loopCount);
+	prefixStr[loopCount++] = pop(prefixStack);
     }
 
     printf("%s\n", prefixStr);
