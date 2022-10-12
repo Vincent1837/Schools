@@ -1,13 +1,15 @@
 #include <stdio.h>
 
+bool isZero (int number) {
+    return number == 0;
+}
+
 int main()
 {
-    int input, h, m, s;
-    printf("please enter seconds : ");
-    scanf("%d", &input);
-    h = input / 3600;
-    m = (input % 3600) / 60;
-    s = (input % 3600) % 60;
-    printf("Answer : %dh %dm %ds", h, m, s);
+    bool a = isZero(2);
+    bool b = isZero(0);
+    printf("%b, %b", a, b);
     return 0;
 }
+
+

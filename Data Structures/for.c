@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    int nums[] = {1, 3, 6, 9};
-    for (int i : nums)
-    {
-        printf("%d", i);
-    }
+    char strBuffer[100];
+    printf("Enter string: ");
+    scanf("%100s", strBuffer);
+    printf("%s\n", strBuffer);
     return 0;
 }
