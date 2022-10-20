@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-bool isZero (int number) {
-    return number == 0;
-}
 
-int main()
-{
-    bool a = isZero(2);
-    bool b = isZero(0);
-    printf("%b, %b", a, b);
+int main(){
+    int input;
+    while (scanf("%d", &input)) {
+	if (input == -1) {
+	    return -1;
+	} else {
+	    printf("%d\n", input);
+	}
+    }
     return 0;
 }
 
