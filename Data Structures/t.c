@@ -1,15 +1,14 @@
 #include <stdio.h>
 
+struct s {
+    int i;
+    char c;
+};
 
 int main(){
-    int input;
-    while (scanf("%d", &input)) {
-	if (input == -1) {
-	    return -1;
-	} else {
-	    printf("%d\n", input);
-	}
-    }
+    struct s* st;
+    scanf("%d", &st->i);
+    printf("%d", st->i);
     return 0;
 }
 
