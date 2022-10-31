@@ -1,15 +1,21 @@
 #include <stdio.h>
 
-struct s {
-    int i;
-    char c;
+struct t
+{
+    int number;
+    char character;
 };
 
+void scanStruct()
+{
+    struct t st;
+    scanf("%d %c", &st.number, &st.character);
+    printf("%d %c\n", st.number, st.character);
+}
+
 int main(){
-    struct s* st;
-    scanf("%d", &st->i);
-    printf("%d", st->i);
-    return 0;
+    int flag = 3 == 3;
+    printf("%d\n", flag);
 }
 
 
