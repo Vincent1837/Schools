@@ -34,7 +34,7 @@ int isEmpty(struct Queue *queue)
 
 int isFull(struct Queue *queue)
 {
-    return queue->size == queue->capacity;
+    return queue->size == 5;
 }
 
 int size(struct Queue *queue)
@@ -56,7 +56,7 @@ void enqueue(struct Queue *queue, struct customers *customer)
 
     if (!isFull(queue) && !flag)
     {
-        queue->rear = (queue->rear + 1) % 5;
+        queue->rear = (queue->rear + 1);
         queue->array[queue->rear] = *customer;
         queue->size++;
     }
@@ -67,14 +67,14 @@ void dequeue(struct Queue *queue)
     if (!isEmpty(queue))
     {
         queue->array[queue->front];
-        queue->front = (queue->front + 1) % 5;
+        queue->front = (queue->front + 1);
         queue->size--;
     }
 }
 
 int main()
 {
-    struct Queue *queue = creatQueue(MAX_SIZE);
+    struct Queue *queue = creatQueue(100);
 
     int input;
     while (1)
