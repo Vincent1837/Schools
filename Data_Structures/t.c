@@ -1,109 +1,78 @@
-// Binary Search Tree operations in C
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-struct node {
-  int key;
-  struct node *left, *right;
-};
+#define MAX_VERTICES 1000
+#define INF 2147483647
 
-// Create a node
-struct node *newNode(int item) {
-  struct node *temp = (struct node *)malloc(sizeof(struct node));
-  temp->key = item;
-  temp->left = temp->right = NULL;
-  return temp;
-}
+int V, E;
+int adj[MAX_VERTICES][MAX_VERTICES];
 
-// Inorder Traversal
-void inorder(struct node *root) {
-  if (root != NULL) {
-    // Traverse left
-    inorder(root->left);
-
-    // Traverse root
-    printf("%d -> ", root->key);
-
-    // Traverse right
-    inorder(root->right);
-  }
-}
-
-// Insert a node
-struct node *insert(struct node *node, int key) {
-  // Return a new node if the tree is empty
-  if (node == NULL) return newNode(key);
-
-  // Traverse to the right place and insert the node
-  if (key < node->key)
-    node->left = insert(node->left, key);
-  else
-    node->right = insert(node->right, key);
-
-  return node;
-}
-
-// Find the inorder successor
-struct node *minValueNode(struct node *node) {
-  struct node *current = node;
-
-  // Find the leftmost leaf
-  while (current && current->left != NULL)
-    current = current->left;
-
-  return current;
-}
-
-// Deleting a node
-struct node *deleteNode(struct node *root, int key) {
-  // Return if the tree is empty
-  if (root == NULL) return root;
-
-  // Find the node to be deleted
-  if (key < root->key)
-    root->left = deleteNode(root->left, key);
-  else if (key > root->key)
-    root->right = deleteNode(root->right, key);
-
-  else {
-    // If the node is with only one child or no child
-    if (root->left == NULL) {
-      struct node *temp = root->right;
-      free(root);
-      return temp;
-    } else if (root->right == NULL) {
-      struct node *temp = root->left;
-      free(root);
-      return temp;
-    }
-
-    // If the node has two children
-    struct node *temp = minValueNode(root->right);
-
-    // Place the inorder successor in position of the node to be deleted
-    root->key = temp->key;
-
-    // Delete the inorder successor
-    root->right = deleteNode(root->right, temp->key);
-  }
-  return root;
-}
-
-// Driver code
-int main() {
-    int input;
-    scanf("%d", &input);
-    int nums[10];
-    for (int i = 0; i < input;i++) {
-        int n;
-        scanf("%d", &n);
-        nums[i] = n;
-    }
-
-    for (int i = 0; i < 10; i++) {
-        printf("%d ", nums[i]);
-    }
-        printf("\n");
+int minKey(int key[], int mstSet[])
+{
+   int min = INF, min_index;
  
+   for (int v = 0; v < V; v++)
+     if (mstSet[v] == 0 && key[v] < min)
+         min = key[v], min_index = v;
+ 
+   return min_index;
+}
+ 
+int printMST(int parent[], int n, int graph[V][V])
+{
+   printf("Edge   Weight\n");
+   int cost = 0;
+   for (int i = 1; i < V; i++)
+   {
+      printf("%d - %d    %d \n", parent[i], i, graph[i][parent[i]]);
+      cost += graph[i][parent[i]];
+   }
+   return cost;
+}
+ 
+void primMST(int graph[V][V])
+{
+     int parent[V];
+     int key[V];
+     int mstSet[V];
+ 
+     for (int i = 0; i < V; i++)
+        key[i] = INF, mstSet[i] = 0;
+ 
+     key[0] = 0;
+     parent[0] = -1;
+ 
+     for (int count = 0; count < V-1; count++)
+     {
+        int u = minKey(key, mstSet);
+ 
+        mstSet[u] = 1;
+ 
+        for (int v = 0; v < V; v++)
+ 
+           if (graph[u][v] && mstSet[v] == 0 && graph[u][v] <  key[v])
+             parent[v]  = u, key[v] = graph[u][v];
+     }
+ 
+     printf("Minimum spanning tree cost: %d\n", printMST(parent, V, graph));
+}
+
+
+
+int main() {
+    // read matrix info 
+    scanf("%d", &V);
+    int matrix[V][V];
+    for (int i = 0; i < V; i++) {
+        for (int j = 0; j < V; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+
+    primMST(matrix);
+
+
+    return 0;
 }
