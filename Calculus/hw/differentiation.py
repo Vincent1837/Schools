@@ -9,7 +9,7 @@ def factorial(n):
 
 def taylorPloy(n, m):
     s = 0
-    for k in range(n):
+    for k in range(n+1):
         s += (-1)**pylab.floor(k/2) * (m**k / factorial(k))
     return s
 
@@ -21,7 +21,7 @@ for i in range(1, n, 2):
     pylab.plot(x, y, label='p'+str(i))
 pylab.plot(x, pylab.sin(x)+pylab.cos(x), label="sin(x)+cos(x)")
 
-pylab.title("Taylor ploynomials with different orders for sin(x)+cos(x)")
+pylab.title("Taylor ploynomials with different order for sin(x)+cos(x)")
 pylab.xlabel("x")
 pylab.ylabel("y")
 pylab.grid()
