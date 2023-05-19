@@ -1,6 +1,7 @@
+package src;
 import java.util.Scanner;
 
-public class A14_111502539 {
+public class P14_111502539 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double num1, num2, result;
