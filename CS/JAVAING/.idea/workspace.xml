@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e484db98-47db-4663-b67f-6ef99f83b6cc" name="Changes" comment="" />
+    <list default="true" id="e484db98-47db-4663-b67f-6ef99f83b6cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../112專題實驗指導老師確認表.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../112專題實驗指導老師確認表.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/A6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/A6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A13_111502539.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A13_111502539.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,16 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RunManager" selected="Application.A6">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yuanc/OneDrive/文件/GitHub/Schools/CS/JAVAING&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.TodoListManager">
     <configuration name="A2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2" />
       <module name="JAVAING" />
@@ -60,8 +71,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoListManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TodoListManager" />
+      <module name="JAVAING" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TodoListManager" />
         <item itemvalue="Application.A6" />
         <item itemvalue="Application.A3" />
         <item itemvalue="Application.A2" />
@@ -76,8 +95,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645906699822</updated>
+      <workItem from="1687958615046" duration="961000" />
+      <workItem from="1687959596787" duration="3000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

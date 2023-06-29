@@ -9,6 +9,7 @@ public class A6 {
             }
             System.out.println(function(inputNumber));
         }
+        sc.close();
     }
     public static int function(int number) {
         if (number <= 4){
