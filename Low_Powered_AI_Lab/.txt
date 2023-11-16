@@ -1,0 +1,100 @@
+這裡提到了五個GREEN LEARNING 目前應用的領域
+他用這些GL 模型與傳統深度學習模型的效能比較來說明
+這些模型在能耗與效能上是可以優於部分傳統模型的
+機器學習換臉辨識
+模型要去辨識這些圖片是否為經過換臉的圖片
+no-reference影像品質評估
+點雲的定位 尤其是partial to partial 的data
+先學習這些點的對應關係如何呈現
+然後再利用這些關係還原3D影像
+graph node 的分類
+這個項目是半監督學習的測試
+也就是說input data 有些是labeled 有些是unlabeled
+那傳統的模型是使用這個Graph convolutional networks
+但是他有兩個缺點
+一個就是他需要足夠多的labeled samples
+另一個就是他通常由兩個以上的convolutional layer組成
+這就造成她鄰近的節點會被過度開發
+而距離較遠的節點的correlation則會被忽略
+造成效能的損失
+娜在這方面的GL的MODEL名字就叫GraphHop
+他在實測上效能表現就超過其他GCN-based的models
+尤其是在labeled samples 比率極低的時候
+那這又更貼近了我們的實際使用場景
+最後一個就是knowledge graph 的 completion
+在這個項目裡我們的模型要找到那些entities 的missing relationships
+這裡我們的GL 的模型green KGC 
+跟其他傳統模型對比下來的結果就是
+能在大小比他們小4倍的前提下
+效能也能與其他傳統模型持平甚至更好
+
+
+第一點就是GL模型的堅韌性
+也就是她抵抗攻擊的能力
+對於一般深度學習神經網路來說
+只要放一點small perturbations
+就能影響神經網路的判斷
+而對於GL的模型來說
+要攻擊這類的模型就需要從以下三點來著手
+第一個是他的representation 
+要不然就是他的feature learner 或是他的classifier
+對第一點來說GL 模型採用saab 跟saak轉換
+來降低representation 的維度
+所以那些perturbations 會被過濾掉
+而第二根第三點則是與他的訓練資料有關
+我們沒辦法透過一個簡單的input 來改變
+
+再來就是他的可靠性以及風險管理
+我們的GL 的model 是基於統計及優化的
+他提供我們的是一個機率型的模型
+對於這樣的模型我們就可以很好的去
+控管它可能會出錯的環節
+這些環節就分為以下這三點
+第一個就是他在採樣時的偏頗以及公平性
+第二個就是DFT 在上 label 時有沒有出錯
+第三個就是我們的模型在分析時有沒有出錯
+
+因為green learning 的模型在做出決策時
+是以邏輯以及數學的方式去一步一步推導
+那這就保證我們在除錯時能夠一層一層的
+重新檢查她推導過程的每一個環節
+而相對於GL來說
+基於DL的模型我們就無從得知他是如何做出判斷
+也就是更難去debug
+
+接下來我總結一下GL 的理念
+傳統的深度學習的模型有幾個缺點
+第一個是複雜的神經網路需要大量的算力去訓練
+所以她高耗能
+第二個就是模型的預測在邏輯上的不可解釋性
+也就是我們無從得知模型為何會給出如此的輸出
+第三個就是模型無法做到輕量化
+也就是模型要求極大的系統資源才能運作
+也就無法讓模型在智慧型手機或是嵌入式系統
+這種較輕量的裝置上運作
+所以GL的研究宗旨就是為了克服這些傳統模型的缺點
+第一點GL的模型是模塊化而且層層遞進cascade的模型
+第二點他省去了Backpropogation 也就是他用數學統計的方式
+來得到每一層的filter weight 
+這樣一來他就省去了繁雜的計算與調適來達到減碳的目的
+第三點GL 的模型
+他的結果從頭到尾都是從input data一步一步算出來的
+所以整個模型區就具有邏輯上的可解釋性
+
+最後我要來講一下監督式的feature selection
+非監督式的feature selection就是saab 跟saak轉換
+而監督式的feature selection 就是DFT 跟 RFT
+DFT 是對 classification problems​
+而RFT 則是for regression problems
+也就是說DFT 是應用在離散的場景下
+而RFT 則是應用在連續的場景下
+DFT 的全名是Discriminant feature test 
+而他是用在測量這些feature dimension 的discriminant power 
+也就是這些特徵的離散程度
+那在DFT裡我們用的是這些subset左右子集的weighted entropy
+來測量他的 discriminant power
+因為 weighted entropy 他考慮的是這些所有classes 的機率形分布
+
+具體步驟就是將這些Training Sample 做分割
+然後再測量它們的DFT loss
+最後再根據這些DFT loss來選擇我們要的features
