@@ -5,12 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e484db98-47db-4663-b67f-6ef99f83b6cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../112專題實驗指導老師確認表.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../112專題實驗指導老師確認表.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercise2/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/A13_111502539.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/A13_111502539.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/A2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/A2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/A3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/A3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVAING/A6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/A6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A13_111502539.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A13_111502539.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/BMW.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/BMW.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/BaseCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/BaseCar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/Benz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/Benz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/Mazda.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/Mazda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/P14_111502539.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/P14_111502539.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/TodoList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/TodoList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVAING/TodoListManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVAING/TodoListManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/161483962.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/2017266.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/2190310.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/2313142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/2484057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/2704811.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/3039024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/3615562.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/3620726.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/3628043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/4837286609.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/826373.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/data/mos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/U_extractor.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/U_extractor.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/V_extractor.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/V_extractor.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/Y_extractor.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/Y_extractor.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/xgboost.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/models/xgboost.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/output/features.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/output/features.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/output/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/output/run.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/test_u.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Low_Powered_AI_Lab/GrenBIQA/GreenBIQA-main/test_u.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programming_Python/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programming_Python/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +78,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TodoListManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="A2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A2" />
       <module name="JAVAING" />
@@ -71,6 +100,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercise2.Main" />
+      <module name="JAVAING" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercise2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoListManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TodoListManager" />
       <module name="JAVAING" />
@@ -80,6 +122,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.TodoListManager" />
         <item itemvalue="Application.A6" />
         <item itemvalue="Application.A3" />
@@ -97,6 +140,7 @@
       <updated>1645906699822</updated>
       <workItem from="1687958615046" duration="961000" />
       <workItem from="1687959596787" duration="3000" />
+      <workItem from="1710120052765" duration="4262000" />
     </task>
     <servers />
   </component>
