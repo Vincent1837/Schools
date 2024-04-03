@@ -2,14 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int stack[1000]; // Stack to store operands
-int top = -1;    // Top of the stack
+int yylex();
+void yyerror(const char *s);
+
+int stack[1000];
+int top = -1;
 
 void push(int value) {
     if (top < 999) {
         stack[++top] = value;
     } else {
-        fprintf(stderr, "Error: Stack overflow\n");
+        printf("invalid Format\n");
         exit(EXIT_FAILURE);
     }
 }
@@ -18,11 +21,10 @@ int pop() {
     if (top >= 0) {
         return stack[top--];
     } else {
-        fprintf(stderr, "Error: Stack underflow\n");
+        printf("invalid Format\n");
         exit(EXIT_FAILURE);
     }
 }
-
 %}
 
 %token NUMBER
@@ -31,24 +33,30 @@ int pop() {
 %%
 
 program: /* empty */
-       | program statement '\n' { printf("Result: %d\n", $2); }
+       | program statement '\n' { /* Do something with the result */ }
 
-statement: expr { $$ = $1; }
+statement: expr { /* Do something with the result */ }
 
-expr: ADD expr expr { $$ = pop() + pop(); push($$); }
-    | SUB expr expr { $$ = pop() - pop(); push($$); }
-    | MUL expr expr { $$ = pop() * pop(); push($$); }
-    | MOD expr expr { $$ = pop() % pop(); push($$); }
-    | INC expr      { $$ = pop() + 1; push($$); }
-    | DEC expr      { $$ = pop() - 1; push($$); }
-    | LOAD NUMBER   { push($2); $$ = $2; }
-    | NUMBER        { push($1); $$ = $1; }
+expr: ADD expr expr { push(pop() + pop()); }
+    | SUB expr expr { push(-pop() + pop()); }
+    | MUL expr expr { push(pop() * pop()); }
+    | MOD expr expr { int b = pop(); int a = pop(); push(a % b); }
+    | INC expr      { push(pop() + 1); }
+    | DEC expr      { push(pop() - 1); }
+    | LOAD NUMBER   { push($2); }
+    ;
 
 %%
 
 int main() {
     yyparse();
-    return 0;
+    if (top == 0) {
+        printf("Result: %d\n", pop());
+        return 0;
+    } else {
+        printf("invalid Format\n");
+        exit(EXIT_FAILURE);
+    }
 }
 
 int yyerror(const char *s) {
@@ -60,6 +68,24 @@ int yylex() {
     int c = getchar();
     if (c == '\n' || c == EOF) {
         return 0;
+    } else if (c == '+') {
+        return ADD;
+    } else if (c == '-') {
+        return SUB;
+    } else if (c == '*') {
+        return MUL;
+    } else if (c == '%') {
+        return MOD;
+    } else if (c == 'i') {
+        return INC;
+    } else if (c == 'd') {
+        return DEC;
+    } else if (c == 'l') {
+        // Handle "load" instruction
+        int value;
+        scanf("%d", &value);
+        yylval = value;
+        return LOAD;
     } else if (c >= '0' && c <= '9') {
         ungetc(c, stdin);
         scanf("%d", &yylval);
