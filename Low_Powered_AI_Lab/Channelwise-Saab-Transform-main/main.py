@@ -1,5 +1,5 @@
 import numpy as np
-from tensorflow.keras.datasets import mnist,fashion_mnist
+from tensorflow import keras
 from skimage.util import view_as_windows
 from pixelhop import Pixelhop
 from skimage.measure import block_reduce
@@ -76,7 +76,7 @@ def get_feat(X, num_layers=3):
 if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     # ---------- Load MNIST data and split ----------
-    (x_train, y_train), (x_test,y_test) = mnist.load_data()
+    (x_train, y_train), (x_test,y_test) = keras.datasets.mnist.load_data()
 
 
     # -----------Data Preprocessing-----------
