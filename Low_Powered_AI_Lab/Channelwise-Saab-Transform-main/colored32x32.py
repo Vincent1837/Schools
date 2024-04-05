@@ -4,7 +4,7 @@ from skimage import transform
 
 # padding mnist dataset from 28x28 to 32x32
 
-(train_images, train_labels), (test_images, test_labels) = keras.datasets.mnist.load_data()
+(train_images, train_labels), (test_images, test_labels) = keras.datasets.cifar10.load_data()
 
 def resize_batch(imgs):
     # A function to resize a batch of MNIST images to (32, 32)
@@ -19,8 +19,6 @@ def resize_batch(imgs):
     return resized_imgs
 
 print("---------------resizing-------------------")
-train_images = resize_batch(train_images)
-test_images = resize_batch(test_images)
 print("Shape of training images:", train_images.shape)
 print("Number of training labels:", len(train_labels))
 print("Shape of test images:", test_images.shape)
