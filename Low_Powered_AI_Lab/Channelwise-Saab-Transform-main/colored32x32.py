@@ -1,30 +1,3 @@
-from tensorflow import keras
-import numpy as np
-from skimage import transform
-
-# padding mnist dataset from 28x28 to 32x32
-
-(train_images, train_labels), (test_images, test_labels) = keras.datasets.cifar10.load_data()
-
-def resize_batch(imgs):
-    # A function to resize a batch of MNIST images to (32, 32)
-    # Args:
-    #   imgs: a numpy array of size [batch_size, 28 X 28].
-    # Returns:
-    #   a numpy array of size [batch_size, 32, 32].
-    imgs = imgs.reshape((-1, 28, 28, 1))
-    resized_imgs = np.zeros((imgs.shape[0], 32, 32, 1))
-    for i in range(imgs.shape[0]):
-        resized_imgs[i, ..., 0] = transform.resize(imgs[i, ..., 0], (32, 32))
-    return resized_imgs
-
-print("---------------resizing-------------------")
-print("Shape of training images:", train_images.shape)
-print("Number of training labels:", len(train_labels))
-print("Shape of test images:", test_images.shape)
-print("Number of test labels:", len(test_labels))
-print("-----------resize completed---------------")
-
 # v 2021.04.12
 # PixelHop and PixelHop++ (Module 1)
 # modified from https://github.com/ChengyaoWang/PixelHop-_c-wSaab/blob/master/pixelhop2.py
@@ -90,6 +63,9 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     from sklearn import datasets
     from skimage.util import view_as_windows
+    from tensorflow import keras
+
+    (train_images, train_labels), (test_images, test_labels) = keras.datasets.cifar10.load_data()
 
     # example callback function for collecting patches and its inverse
     def Shrink(X, shrinkArg):
@@ -105,7 +81,7 @@ if __name__ == "__main__":
     print(" > This is a test example: ")
     digits = datasets.load_digits()
     X = digits.images.reshape((len(digits.images), 8, 8, 1))
-    X = test_images
+    X = train_images
     print(" input feature shape: %s"%str(X.shape))
 
     # set args
