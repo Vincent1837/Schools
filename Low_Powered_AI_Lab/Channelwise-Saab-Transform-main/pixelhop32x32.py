@@ -2,10 +2,12 @@ from tensorflow import keras
 import numpy as np
 from skimage import transform
 
-# padding mnist dataset from 28x28 to 32x32
+# loading mnist and cifar10 datasets
 
-(train_images, train_labels), (test_images, test_labels) = keras.datasets.mnist.load_data()
+(mnist_train_images, mnist_train_labels), (mnist_test_images, mnist_test_labelss) = keras.datasets.mnist.load_data()
+(cifar_train_images, cifar_train_labels), (cifar_test_images, cifar_test_labels) = keras.datasets.cifar10.load_data()
 
+# padding mnist images from 28x28 to 32x32
 def resize_batch(imgs):
     # A function to resize a batch of MNIST images to (32, 32)
     # Args:
@@ -19,13 +21,18 @@ def resize_batch(imgs):
     return resized_imgs
 
 print("---------------resizing-------------------")
-train_images = resize_batch(train_images)
-test_images = resize_batch(test_images)
-print("Shape of training images:", train_images.shape)
-print("Number of training labels:", len(train_labels))
-print("Shape of test images:", test_images.shape)
-print("Number of test labels:", len(test_labels))
+mnist_train_images = resize_batch(mnist_train_images)
+mnist_test_images = resize_batch(mnist_test_images)
+print(f"Shape of training images: {mnist_train_images.shape}")
+print(f"Number of training labels: {len(mnist_train_labels)}")
+print(f"Shape of testing images: {mnist_test_images.shape}")
+print(f"Number of testing labels: {len(mnist_test_labelss)}")
 print("-----------resize completed---------------")
+
+print(f"Shape of training images: {cifar_train_images.shape}")
+print(f"Number of training labels: {len(cifar_train_labels)}")
+print(f"Shape of test images: {cifar_test_images.shape}")
+print(f"Number of test labels: {len(cifar_test_labels)}")
 
 # v 2021.04.12
 # PixelHop and PixelHop++ (Module 1)
@@ -107,7 +114,7 @@ if __name__ == "__main__":
     print(" > This is a test example: ")
     digits = datasets.load_digits()
     X = digits.images.reshape((len(digits.images), 8, 8, 1))
-    X = test_images
+    X = mnist_test_images
     print(" input feature shape: %s"%str(X.shape))
 
     # set args
@@ -131,6 +138,4 @@ if __name__ == "__main__":
     output2_new = p2_new.transform_singleHop(X)
 
     print("------- DONE -------\n")
-
-
-
+    
