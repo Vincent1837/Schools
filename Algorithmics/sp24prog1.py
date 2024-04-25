@@ -1,8 +1,3 @@
-import random
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-
 # Bubble sort
 def bubble_sort(data):
     n = len(data)
@@ -62,32 +57,33 @@ def merge_sort(A, p, r, steps):
         k += 1 
 
 # Quick sort
-def quick_sort(arr):
-    if len(arr) <= 1:
-        yield arr
-        return arr
-    
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    
-    yield from quick_sort(left)
-    yield middle
-    yield from quick_sort(right)
+def quick_sort(A, p, r, steps):
+    def partition(A, p, r, steps):
+        i = p - 1
+        for j in range(p, r):
+            if A[j] <= A[r]:
+                i += 1
+                A[i], A[j] = A[j], A[i]
+                steps += [list(A)]
+        A[i + 1], A[r] = A[r], A[i + 1]
+        steps += [list(A)]
+        return i + 1
+    if p < r:
+        q = partition(A, p, r, steps)
+        quick_sort(A, p, q - 1, steps)
+        quick_sort(A, q + 1, r, steps)
 
 # Heap sort
-def heap_sort(data):
+def heap_sort(data, steps):
     n = len(data)
     for i in range(n//2-1, -1, -1):
-        heapify(data, n, i)
+        heapify(data, n, i, steps)
     for i in range(n-1, 0, -1):
         data[0], data[i] = data[i], data[0]
-        heapify(data, i, 0)
-        yield data
+        steps += [list(data)]
+        heapify(data, i, 0, steps)
         
-# Heapify
-def heapify(data, n, i):
+def heapify(data, n, i, steps):
     largest = i
     l = 2*i+1
     r = 2*i+2
@@ -97,20 +93,34 @@ def heapify(data, n, i):
         largest = r
     if largest!= i:
         data[i], data[largest] = data[largest], data[i]
-        heapify(data, n, largest)
+        steps += [list(data)]
+        heapify(data, n, largest, steps)
+
+# helper function for removing duplicated elements in steps
+def remove_duplicates(lst):
+    seen = set()
+    result = []
+    for sublist in lst:
+        sublist_tuple = tuple(sublist)
+        if sublist_tuple not in seen:
+            result.append(sublist)
+            seen.add(sublist_tuple)
+    return result
 
 
 if __name__ == '__main__':
-    
+    # generate random data
+    import random
     data = random.sample(range(1, 51), 50)
-
+    
+    # each step of sorting
     bubble_sort_steps = [list(data)]
     insertion_sort_steps = [list(data)]
     merge_sort_steps = [list(data)]
     quick_sort_steps = [list(data)]
     heap_sort_steps = [list(data)]
 
-    
+    # sort the data and record the steps
     for i in bubble_sort(data.copy()):
         bubble_sort_steps += [list(i)]
         
@@ -118,31 +128,21 @@ if __name__ == '__main__':
         insertion_sort_steps += [list(i)]
 
     merge_sort_data = data.copy()
-    merge_sort(merge_sort_data, 0, len(merge_sort_data) - 1, merge_sort_steps)
-    # remove duplicates
-    def remove_duplicates(lst):
-        seen = set()
-        result = []
-        for sublist in lst:
-            sublist_tuple = tuple(sublist)
-            if sublist_tuple not in seen:
-                result.append(sublist)
-                seen.add(sublist_tuple)
-        return result
+    merge_sort(merge_sort_data, 0, len(data) - 1, merge_sort_steps)
     merge_sort_steps = remove_duplicates(merge_sort_steps)
         
-    for i in quick_sort(data.copy()):
-        quick_sort_steps += [list(i)]
+    quick_sort_data = data.copy()
+    quick_sort(quick_sort_data, 0, len(data)-1, quick_sort_steps)
+    quick_sort_steps = remove_duplicates(quick_sort_steps)
         
-    for i in heap_sort(data.copy()):
-        heap_sort_steps += [list(i)]
+    heap_sort(data.copy(), heap_sort_steps)
         
-    """ for i in merge_sort_steps:
-        print(i) """
-        
-    # ----------------------------------------------------------------    
+    # --------------------------------------------------------------------------------
+    import matplotlib.pyplot as plt
+    from matplotlib.animation import FuncAnimation
+    
     # initialize the figure
-    fig, axes = plt.subplots(1, 5, figsize=(15, 4))
+    fig, axes = plt.subplots(1, 5, figsize=(15, 3))
     bars = []
     algorithms = ['Bubble Sort', 'Insertion Sort', 'Merge Sort', 'Quick Sort', 'Heap Sort']
     for i, ax in enumerate(axes):
@@ -159,18 +159,22 @@ if __name__ == '__main__':
     if len(insertion_sort_steps) < max_step:
         insertion_sort_steps += [insertion_sort_steps[-1] for i in range(max_step - len(insertion_sort_steps))]
     if len(merge_sort_steps) < max_step:
-        merge_sort_steps += [merge_sort_steps[-1] for i in range(max_step - len(merge_sort_steps))] 
+        merge_sort_steps += [merge_sort_steps[-1] for i in range(max_step - len(merge_sort_steps))]
+    if len(quick_sort_steps) < max_step:
+        quick_sort_steps += [quick_sort_steps[-1] for i in range(max_step - len(quick_sort_steps))]
+    if len(heap_sort_steps) < max_step:
+        heap_sort_steps += [heap_sort_steps[-1] for i in range(max_step - len(heap_sort_steps))]
     # combining the steps
-    sorting_steps = [[bubble_sort_steps[i], insertion_sort_steps[i], merge_sort_steps[i]] for i in range(max_step)]
-
+    sorting_steps = [[bubble_sort_steps[i], insertion_sort_steps[i], merge_sort_steps[i], quick_sort_steps[i], heap_sort_steps[i]] for i in range(max_step)]
+        
     # animation
     def update(frame):
-        for i, rect in enumerate(bars[0]):
-            rect.set_height(frame[0][i])
-        for i, rect in enumerate(bars[1]):
-            rect.set_height(frame[1][i])
-        for i, rect in enumerate(bars[2]):
-            rect.set_height(frame[2][i])
+        for i in range(5):
+            for j, rect in enumerate(bars[i]):
+                rect.set_height(frame[i][j])
         
-    ani = FuncAnimation(fig, func=update, frames=sorting_steps, interval=1, repeat=False)
+    # each frame is a step of sorting
+    ani = FuncAnimation(fig, func=update, frames=sorting_steps, interval=100, repeat=False)
+    fig.tight_layout()
+    fig.canvas.set_window_title('Sorting Algorithms Visualization')
     plt.show()

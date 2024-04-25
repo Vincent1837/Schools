@@ -1,4 +1,4 @@
-from sorting_algorothms import *
+from sp24prog1 import *
 
 data = random.sample(range(1, 51), 50)
 
