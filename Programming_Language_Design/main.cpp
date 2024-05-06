@@ -31,7 +31,7 @@ public:
 
     vector<T> init() {
         vector<T> newList;
-        for (int i = 1; i < list.size(); i++) {
+        for (int i = 0; i < list.size() - 1; i++) {
             newList.push_back(list[i]);
         }
         return newList;
