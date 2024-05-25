@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: uncover 
+math: mathjax
 ---
 
 # Algorithm Homework 5
@@ -48,7 +49,7 @@ The proposed algorithm is not correct. Dijkstra's algorithm must process all ver
 
 1. Initialize an empty set of edges $S$.
 2. For each vertex $v \in V$:
-   - If \( v \neq s \), add the edge $(\pi(v), v)$ to $S$.
+   - If $v \neq s$, add the edge $(\pi(v), v)$ to $S$.
 3. Check that $S$ forms a spanning tree:
    - Ensure $|S| = |V| - 1$.
    - Use a union-find data structure to check that $S$ forms a single connected component without cycles.
