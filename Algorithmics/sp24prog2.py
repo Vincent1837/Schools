@@ -86,7 +86,7 @@ def dag_shortest_path(vertices, graph):
     return distance
 
 def main():
-    vertices, graph = read_graph('input.txt')
+    vertices, graph = read_graph('Algorithmics/input.txt')
     has_negative_cycle, distance = detect_negative_cycle(vertices, graph)
 
     if has_negative_cycle:
