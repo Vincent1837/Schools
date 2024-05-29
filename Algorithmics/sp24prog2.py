@@ -1,107 +1,149 @@
 import heapq
-import sys
 
-def read_graph(filename):
-    with open(filename, 'r') as file:
-        vertices, edges = map(int, file.readline().strip().split())
-        graph = []
-        for line in file:
-            u, v, w = map(int, line.strip().split())
-            graph.append((u, v, w))
-    return vertices, graph
+class Graph:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.edges = []
+        self.adj_list = {i: [] for i in range(vertices)}
+        self.has_neg_weight_edges = False
+        self.has_neg_weight_cycles = False
 
-def detect_negative_cycle(vertices, graph):
-    distance = [float('inf')] * vertices
-    distance[0] = 0
+    def add_edge(self, u, v, w):
+        if w < 0:
+            self.has_neg_weight_edges = True
+        self.edges.append((u, v, w))
+        self.adj_list[u].append((v, w))
 
-    for _ in range(vertices - 1):
-        for u, v, w in graph:
-            if distance[u] != float('inf') and distance[u] + w < distance[v]:
-                distance[v] = distance[u] + w
+    def bellman_ford(self, source):
+        dist = [float("Inf")] * self.V
+        dist[source] = 0
 
-    for u, v, w in graph:
-        if distance[u] != float('inf') and distance[u] + w < distance[v]:
-            return True, distance
-    return False, distance
+        for _ in range(self.V - 1):
+            for u, v, w in self.edges:
+                if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+                    dist[v] = dist[u] + w
 
-def bellman_ford(vertices, graph):
-    distance = [float('inf')] * vertices
-    distance[0] = 0
+        for u, v, w in self.edges:
+            if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+                self.has_neg_weight_cycles = True
+                return dist, True
 
-    for _ in range(vertices - 1):
-        for u, v, w in graph:
-            if distance[u] != float('inf') and distance[u] + w < distance[v]:
-                distance[v] = distance[u] + w
-    return distance
+        return dist, False
 
-def dijkstra(vertices, graph):
-    distance = [float('inf')] * vertices
-    distance[0] = 0
-    pq = [(0, 0)]  # (distance, vertex)
-    adj = {i: [] for i in range(vertices)}
-    for u, v, w in graph:
-        adj[u].append((v, w))
+    def dijkstra(self, source):
+        dist = [float('Inf')] * self.V
+        dist[source] = 0
+        priority_queue = [(0, source)]
 
-    while pq:
-        dist, u = heapq.heappop(pq)
-        if dist > distance[u]:
-            continue
-        for v, weight in adj[u]:
-            if distance[u] + weight < distance[v]:
-                distance[v] = distance[u] + weight
-                heapq.heappush(pq, (distance[v], v))
-    return distance
+        while priority_queue:
+            current_distance, u = heapq.heappop(priority_queue)
 
-def dag_shortest_path(vertices, graph):
-    def topological_sort(vertices, adj):
-        indegree = [0] * vertices
-        for u in adj:
-            for v, _ in adj[u]:
-                indegree[v] += 1
+            if current_distance > dist[u]:
+                continue
 
-        stack = [i for i in range(vertices) if indegree[i] == 0]
-        topo_order = []
+            for neighbor, weight in self.adj_list[u]:
+                distance = current_distance + weight
+
+                if distance < dist[neighbor]:
+                    dist[neighbor] = distance
+                    heapq.heappush(priority_queue, (distance, neighbor))
+
+        return dist
+
+    def print_solution(self, dist):
+        print("Vertex Distance from Source")
+        for i in range(self.V):
+            print(f"{i}\t\t{dist[i]}")
+
+    def detect_negative_cycles(self):
+        for vertex in range(self.V):
+            dist, has_cycle = self.bellman_ford(vertex)
+            if has_cycle:
+                self.has_neg_weight_cycles = True
+                return
+
+    def topological_sort_util(self, v, visited, stack):
+        visited[v] = True
+        for edge in self.adj_list[v]:
+            if not visited[edge[0]]:
+                self.topological_sort_util(edge[0], visited, stack)
+        stack.insert(0, v)
+
+    def is_dag_util(self):
+        visited = [False] * self.V
+        stack = []
+        for i in range(self.V):
+            if not visited[i]:
+                self.topological_sort_util(i, visited, stack)
+        for u, v, _ in self.edges:
+            if stack.index(u) > stack.index(v):
+                return False
+        return True
+
+    def dag_shortest_path(self, source):
+        visited = [False] * self.V
+        stack = []
+        for i in range(self.V):
+            if not visited[i]:
+                self.topological_sort_util(i, visited, stack)
+        
+        dist = [float("Inf")] * self.V
+        dist[source] = 0
 
         while stack:
-            u = stack.pop()
-            topo_order.append(u)
-            for v, _ in adj[u]:
-                indegree[v] -= 1
-                if indegree[v] == 0:
-                    stack.append(v)
-        return topo_order
+            u = stack.pop(0)
+            for edge in self.edges:
+                if edge[0] == u:
+                    v = edge[1]
+                    weight = edge[2]
+                    if dist[u] != float("Inf") and dist[u] + weight < dist[v]:
+                        dist[v] = dist[u] + weight
 
-    distance = [float('inf')] * vertices
-    distance[0] = 0
-    adj = {i: [] for i in range(vertices)}
-    for u, v, w in graph:
-        adj[u].append((v, w))
+        return dist
 
-    topo_order = topological_sort(vertices, adj)
-    for u in topo_order:
-        if distance[u] != float('inf'):
-            for v, weight in adj[u]:
-                if distance[u] + weight < distance[v]:
-                    distance[v] = distance[u] + weight
-    return distance
+    def classify_graph(self):
+        self.detect_negative_cycles()
+        if self.has_neg_weight_cycles:
+            return "A"
+        elif self.has_neg_weight_edges:
+            return "B"
+        elif not self.has_neg_weight_edges:
+            if self.is_dag_util():
+                return "D"
+            else:
+                return "C"
 
 def main():
-    vertices, graph = read_graph('Algorithmics/input.txt')
-    has_negative_cycle, distance = detect_negative_cycle(vertices, graph)
+    file_path = "input.txt"
+    with open(file_path, 'r') as file:
+        vertices, edges = map(int, file.readline().split())
+        graph = Graph(vertices)
+        for line in file:
+            u, v, w = map(int, line.split())
+            graph.add_edge(u, v, w)
 
-    if has_negative_cycle:
-        print("No shortest paths can be found.")
-    else:
-        if any(w < 0 for _, _, w in graph):
-            distance = bellman_ford(vertices, graph)
-        elif any(v > u for u, v, _ in graph):
-            distance = dag_shortest_path(vertices, graph)
+    graph_type = graph.classify_graph()
+    print(f"Graph type: {graph_type}")
+
+    if graph_type == "A":
+        dist, has_cycle = graph.bellman_ford(0)
+        if has_cycle:
+            print("No shortest paths can be found.")
         else:
-            distance = dijkstra(vertices, graph)
-
-        print("Shortest paths from vertex 0:")
-        for i in range(vertices):
-            print(f"Vertex {i}: {distance[i]}")
+            print("Using Bellmanford")
+            graph.print_solution(dist)
+    elif graph_type == "D":
+        print("Using DAG shortest paths")
+        dist = graph.dag_shortest_path(0)
+        graph.print_solution(dist)
+    elif graph_type == "C":
+        print("Using Dijkstra's")
+        dist = graph.dijkstra(0)
+        graph.print_solution(dist)
+    else:
+        print("Using Bellmanford")
+        dist, _ = graph.bellman_ford(0)
+        graph.print_solution(dist)
 
 if __name__ == "__main__":
     main()
