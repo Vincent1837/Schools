@@ -8,7 +8,7 @@ class ConsoleView(userController: UserController, sheetController: SheetControll
     println("5. Change a sheet's access right.")
     println("6. Collaborate with another user")
     println("----------------------------------")
-    println("> ")
+    print("> ")
 
     scala.io.StdIn.readInt() match {
       case 1 => createUser()
@@ -25,6 +25,7 @@ class ConsoleView(userController: UserController, sheetController: SheetControll
     println("Enter username:")
     val username = scala.io.StdIn.readLine()
     userController.createUser(username)
+    println(s"creat a user named \"$username\"")
   }
 
   def createSheet(): Unit = {
