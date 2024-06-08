@@ -1,0 +1,302 @@
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@2081b166]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@431d7332]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@2081b166]
+2024.06.08 12:44:51 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.06.08 12:44:54 INFO  Running List(C:\Users\yuanc\AppData\Local\Coursier\data\bin\scala-cli.BAT, setup-ide, C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject)
+2024.06.08 12:44:54 INFO  Scala CLI: [error]  C:\Users\yuanc\OneDrive\���\GitHub\Schools\Programming_Language_Design\FinalProject: input file not found
+2024.06.08 12:44:54 INFO  Scala CLI: Try viewing the relevant help to see the list of available sub-commands and options.
+2024.06.08 12:44:54 INFO  Scala CLI:   C:\Users\yuanc\AppData\Local\Coursier\data\bin\.scala-cli.aux.exe setup-ide --help
+2024.06.08 12:44:54 WARN  no build tool detected in workspace 'C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2024.06.08 12:44:54 WARN  Build server is not auto-connectable.
+2024.06.08 12:44:54 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:31 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:31 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:33 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:36 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:45:39 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:46:46 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.12/scalap-2.13.12.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.12/scalap-2.13.12.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.12/scala-compiler-2.13.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.12/scala-compiler-2.13.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.pom
+Downloading https://repo1.maven.org/maven2/org/jline/jline-parent/3.22.0/jline-parent-3.22.0.pom
+Downloaded https://repo1.maven.org/maven2/org/jline/jline-parent/3.22.0/jline-parent-3.22.0.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.12/scalap-2.13.12.jar
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scalap/2.13.12/scalap-2.13.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.jar
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.12/scala-compiler-2.13.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.jar
+2024.06.08 12:47:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:47:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.12/scala-compiler-2.13.12.jar
+2024.06.08 12:47:26 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:47:26 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:47:27 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 12:47:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:47:42 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:47:42 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 12:47:43 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 12:47:43 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 15:56:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 15:56:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 15:56:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 15:56:44 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 15:56:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 15:56:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:39 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:39 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:00:47 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:01:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:01:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:01:43 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:01:57 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:02:00 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:02:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:02:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:02:41 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:02:42 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:02:50 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:03:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:03:15 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:05:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:19:26 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:19:34 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:19:50 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:20:13 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:20:13 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:20:13 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:20:17 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:48 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:50 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:50 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:51 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:51 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:52 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:52 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:55 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:37:55 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:48 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:48 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:49 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:49 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:51 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:52 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:52 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:38:54 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:39:32 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:39:34 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:39:36 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:39:36 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:39:37 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:39:38 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:40:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:40:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:43:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:43:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:43:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:43:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:43:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:13 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:13 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:16 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:16 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:23 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:23 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:23 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:26 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:44:26 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:44:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:03 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:04 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:04 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:04 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:06 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:45:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:26 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:38 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:38 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:40 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:42 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:45:42 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:43 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:43 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:44 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:45:44 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:45:59 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:04 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:04 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:05 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:46:05 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 16:46:07 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 16:46:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:26:47 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:28:06 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:28:07 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:28:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:29:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:30:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:30:11 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:30:31 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:30:34 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:02 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:08 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:08 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:08 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:10 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:10 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:10 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:31:09 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:11 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:11 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:31:12 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:31:12 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:32:08 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:33:46 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:33:59 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:39:36 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:39:49 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:39:49 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:39:50 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:39:50 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:39:57 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:07 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:07 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:12 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:15 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:20 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:20 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:21 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:21 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:22 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:22 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:23 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:23 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:24 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:24 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:24 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:26 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:26 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:27 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:29 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:28 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:29 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:30 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:31 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:31 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:31 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:31 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:32 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:32 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:32 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:34 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:34 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:34 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:35 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:34 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:35 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:37 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:38 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:38 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:40 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:40 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:41 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 17:40:42 WARN  no build target for: C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala
+2024.06.08 17:40:42 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:25 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:27 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:30 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:32 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:32 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:15:35 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:16:15 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:16:17 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:16:17 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:16:17 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:17:43 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:17:43 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:17:46 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.08 18:17:46 INFO  no build target found for C:\Users\yuanc\OneDrive\文件\GitHub\Schools\Programming_Language_Design\FinalProject\final\main.scala. Using presentation compiler with project's scala-library version: 3.3.3
