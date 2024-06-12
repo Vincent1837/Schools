@@ -3,7 +3,6 @@ marp: true
 theme: default
 math: mathjax
 size: 4:3
-
 ---
 
 # Algorithm Homework 5
