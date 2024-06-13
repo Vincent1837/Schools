@@ -27,23 +27,36 @@ size: 4:3
 ---
 
 #### 24.2-3
-- Use DFS starting at the source, follow edges with positive residual capacity, backtrack when necessary, and stop when the sink is reached.
+
+![](graph.png)
 
 ---
 
 #### 24.2-5
-- Ford-Fulkerson method: uses any augmenting path algorithm (DFS or BFS).
-- Edmonds-Karp algorithm: specifically uses BFS to find the shortest augmenting path.
+- The flows must go through the original graph $G$, which has edges with finite compacities.
+
+- Thus, any flow in the new network has a finite value if the edges of the original network with multiple sources and sinks have finite capacity.
 
 ---
 
 #### 24.2-8
-- Max-flow min-cut theorem: the maximum value of an $s$-$t$ flow is equal to the total weight of the edges in a minimum cut separating $s$ and $t$.
+   
+1. **Capacity Constraint**: The capacity constraint is applied to the amount of flow that can pass through an edge, and this remains unchanged.
+
+2. **Termination Condition**: The absence of edges into $s$ means that once flow is sent out from $s$, it cannot be returned, but this doesn't affect the identification of valid paths from $s$ to $t$
+
+3. **Maximum Flow**: The absence of edges into $s$ does not change the capacities of the edges crossing any cut. Thus, the maximum flow calculated is still accurate.
+
+- The algorithm's key properties—flow conservation, capacity constraints, and termination condition—remain valid, ensuring the correct maximum flow is found.
 
 ---
 
 #### 24.3-3
-- Bipartite matching can be modeled as a maximum flow problem by constructing a flow network where vertices on the left are connected to the source, vertices on the right are connected to the sink, and edges represent possible matches with capacity 1.
+By definition, an augmenting path is a simple path $s \rightsquigarrow t$ in the residual network $G'_f$. The only edges involving $s$ or $t$ connect $s$ to $L$ and $R$ to $t$.
+Thus any augmenting path must go
+$s \rightarrow L \rightarrow R \rightarrow \cdots \rightarrow L \rightarrow R \rightarrow t$
+crossing back and forth between $L$ and $R$ at most as many times as it can do so without using a vertex twice. It contains $s$, $t$, and equal numbers of distinct vertices from $L$ and $R$—at most $2 + 2 \cdot \min(|L|, |R|)$ vertices in all. The length of an augmenting path (i.e., its number of edges) is thus bounded above by $2 \cdot \min(|L|, |R|) + 1$.
+
 
 ---
 
