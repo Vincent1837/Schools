@@ -1,175 +1,196 @@
 #include <iostream>
 #include <string>
-#include <regex>
-#include <vector>
-
+#include <cctype>
 using namespace std;
 
-// Token types
-enum TokenType {
-    TOKEN_ID,
-    TOKEN_STRLIT,
-    TOKEN_LBR,
-    TOKEN_RBR,
-    TOKEN_DOT,
-    TOKEN_INVALID,
-    TOKEN_END
-};
+enum TokenType { ID, STRLIT, LBR, RBR, DOT, INVALID, END };
 
-// Token structure
 struct Token {
     TokenType type;
     string value;
 };
 
-// Global variables for tokens and current token index
-vector<Token> tokens;
-size_t current_token_index = 0;
+string input;
+int pos = 0;
 
-// Function prototypes
-void getNextToken();
-void program();
-void stmts();
-void stmt();
-void primary();
-void primary_tail();
-void error(const string& message);
-
-// Helper functions to determine token type
-TokenType getTokenType(const string& token_str) {
-    if (regex_match(token_str, regex("[A-Za-z_][A-Za-z0-9_]*"))) {
-        return TOKEN_ID;
-    }
-    if (regex_match(token_str, regex("\"[^\"]*\""))) {
-        return TOKEN_STRLIT;
-    }
-    if (token_str == "(") {
-        return TOKEN_LBR;
-    }
-    if (token_str == ")") {
-        return TOKEN_RBR;
-    }
-    if (token_str == ".") {
-        return TOKEN_DOT;
-    }
-    return TOKEN_INVALID;
+// Function to get the next character in the input
+char peek() {
+    if (pos < input.length())  // Check boundary
+        return input[pos];
+    return '\0';  // Return null character at the end of string
 }
 
-// Lexer using regex for tokenization
-vector<Token> tokenize(const string& input) {
-    vector<Token> result;
-    regex token_regex(R"((\"[^\"]*\"|[A-Za-z_][A-Za-z0-9_]*|\(|\)|\.))");
-    auto words_begin = sregex_iterator(input.begin(), input.end(), token_regex);
-    auto words_end = sregex_iterator();
+// Function to consume the next character in the input
+char advance() {
+    if (pos < input.length())  // Check boundary before incrementing
+        return input[pos++];
+    return '\0';  // Safeguard to avoid going beyond string bounds
+}
 
-    for (auto it = words_begin; it != words_end; ++it) {
-        string token_str = it->str();
-        TokenType type = getTokenType(token_str);
-        if (type == TOKEN_INVALID) {
-            result.push_back({TOKEN_INVALID, token_str});
-            break; // No need to continue if an invalid token is found
+// Function to skip whitespace
+void skipWhitespace() {
+    while (isspace(peek())) {
+        advance();
+    }
+}
+
+// Function to recognize identifiers (ID)
+Token getID() {
+    string result;
+    if (isalpha(peek()) || peek() == '_') {
+        result += advance();
+        while (isalnum(peek()) || peek() == '_') {
+            result += advance();
         }
-        result.push_back({type, token_str});
+        return { ID, result };
     }
-    return result;
+    return { INVALID, "" };
 }
 
-// Recursive descent parsing functions
-
-// program → stmts
-void program() {
-    stmts();
-}
-
-// stmts → stmt stmts | λ
-void stmts() {
-    if (tokens[current_token_index].type == TOKEN_ID || tokens[current_token_index].type == TOKEN_STRLIT) {
-        stmt();
-        stmts();
-    }
-}
-
-// stmt → primary | STRLIT | λ
-void stmt() {
-    if (tokens[current_token_index].type == TOKEN_ID) {
-        primary();
-    } else if (tokens[current_token_index].type == TOKEN_STRLIT) {
-        cout << "STRLIT " << tokens[current_token_index].value << endl;
-        getNextToken();
-    }
-}
-
-// primary → ID primary_tail
-void primary() {
-    if (tokens[current_token_index].type == TOKEN_ID) {
-        cout << "ID " << tokens[current_token_index].value << endl;
-        getNextToken();
-        primary_tail();
-    }
-}
-
-// primary_tail → DOT ID primary_tail | LBR stmt RBR primary_tail | λ
-void primary_tail() {
-    if (tokens[current_token_index].type == TOKEN_DOT) {
-        cout << "DOT ." << endl;
-        getNextToken();
-        if (tokens[current_token_index].type == TOKEN_ID) {
-            cout << "ID " << tokens[current_token_index].value << endl;
-            getNextToken();
-            primary_tail();
-        } else {
-            error("Expected ID after DOT");
+// Function to recognize string literals (STRLIT)
+Token getSTRLIT() {
+    string result;
+    if (peek() == '"') {
+        result += advance();  // Consume opening quote
+        while (peek() != '"' && peek() != '\0') {  // Protect against out-of-bounds
+            result += advance();
         }
-    } else if (tokens[current_token_index].type == TOKEN_LBR) {
-        cout << "LBR (" << endl;
-        getNextToken();
-        stmt();
-        if (tokens[current_token_index].type == TOKEN_RBR) {
-            cout << "RBR )" << endl;
-            getNextToken();
-            primary_tail();
-        } else {
-            error("Expected RBR after stmt");
+        if (peek() == '"') {
+            result += advance();  // Consume closing quote
+            return { STRLIT, result };
         }
     }
+    return { INVALID, "" };
 }
 
-// Function to move to the next token
-void getNextToken() {
-    if (current_token_index < tokens.size() - 1) {
-        current_token_index++;
-    } else {
-        tokens.push_back({TOKEN_END, ""});
+// Function to get the next token from input
+Token getNextToken() {
+    skipWhitespace();  // Skip whitespace before parsing tokens
+
+    if (peek() == '\0') return { END, "" };  // End of input
+
+    if (peek() == '(') {
+        advance();
+        return { LBR, "(" };
     }
+    if (peek() == ')') {
+        advance();
+        return { RBR, ")" };
+    }
+    if (peek() == '.') {
+        advance();
+        return { DOT, "." };
+    }
+    if (peek() == '"') {
+        return getSTRLIT();
+    }
+    if (isalpha(peek()) || peek() == '_') {
+        return getID();
+    }
+    return { INVALID, "" };
 }
 
-// Error handling function
-void error(const string& message) {
-    cout << "invalid input" << endl;
-    exit(1);
+// Recursive functions for parsing according to the given grammar
+bool primary_tail();
+bool stmt();
+bool stmts();
+bool program();
+
+Token currentToken;
+
+// Function to consume the current token and move to the next one
+void advanceToken() {
+    currentToken = getNextToken();
+}
+
+// Parsing functions
+bool primary() {
+    if (currentToken.type == ID) {
+        advanceToken();
+        return primary_tail();
+    }
+    return false;
+}
+
+bool primary_tail() {
+    if (currentToken.type == DOT) {
+        advanceToken();
+        if (currentToken.type == ID) {
+            advanceToken();
+            return primary_tail();
+        }
+        return false;  // DOT must be followed by ID
+    }
+    if (currentToken.type == LBR) {
+        advanceToken();
+        if (stmt()) {
+            if (currentToken.type == RBR) {
+                advanceToken();
+                return primary_tail();
+            }
+        }
+        return false;  // '(' must be followed by stmt and ')'
+    }
+    return true;  // epsilon (λ)
+}
+
+bool stmt() {
+    if (primary()) return true;
+    if (currentToken.type == STRLIT) {
+        advanceToken();
+        return true;
+    }
+    return true;  // epsilon (λ)
+}
+
+bool stmts() {
+    if (stmt()) {
+        return stmts();  // Recursive stmts production
+    }
+    return true;  // epsilon (λ)
+}
+
+bool program() {
+    return stmts();  // Start by parsing stmts
 }
 
 // Main function
 int main() {
-    string line;
+    getline(cin, input);
 
-    // Process multiple lines of input
-    while (getline(cin, line)) {
-        tokens = tokenize(line);
-        if (tokens.empty() || tokens[0].type == TOKEN_INVALID) {
-            cout << "invalid input" << endl;
-            continue;
+    if (input.empty()) {
+        cout << "invalid input" << endl;
+        return 1;
+    }
+
+    advanceToken();
+    if (program() && currentToken.type == END) {
+        pos = 0;  // Reset position for token output
+        advanceToken();
+        while (currentToken.type != END) {
+            switch (currentToken.type) {
+            case ID:
+                cout << "ID " << currentToken.value << endl;
+                break;
+            case STRLIT:
+                cout << "STRLIT " << currentToken.value << endl;
+                break;
+            case LBR:
+                cout << "LBR " << currentToken.value << endl;
+                break;
+            case RBR:
+                cout << "RBR " << currentToken.value << endl;
+                break;
+            case DOT:
+                cout << "DOT " << currentToken.value << endl;
+                break;
+            default:
+                break;
+            }
+            advanceToken();
         }
-
-        // Initialize and start parsing
-        current_token_index = 0;
-        getNextToken();
-        program();
-
-        // Check if all tokens were consumed
-        if (tokens[current_token_index].type != TOKEN_END) {
-            error("Unexpected token after valid input");
-        }
+    } else {
+        cout << "invalid input" << endl;
     }
 
     return 0;
