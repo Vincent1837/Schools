@@ -13,7 +13,7 @@ bool program() {
 }
 
 bool stmts() {
-    return
+    return 
 }
 
 int main () {
