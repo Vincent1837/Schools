@@ -1,176 +1,208 @@
 #include <iostream>
-#include <string>
-#include <regex>
 #include <vector>
-
+#include <string>
+#include <cctype>
 using namespace std;
 
-// Token types
-enum TokenType {
-    TOKEN_ID,
-    TOKEN_STRLIT,
-    TOKEN_LBR,
-    TOKEN_RBR,
-    TOKEN_DOT,
-    TOKEN_INVALID,
-    TOKEN_END
-};
 
-// Token structure
+
+void parseStmt();
+enum TokenType { ID, STRLIT, LBR, RBR, DOT, INVALID };
+string types[] = {"ID", "STRLIT", "LBR", "RBR", "DOT"};
+
+// Structure to store a token with its type and value
 struct Token {
     TokenType type;
     string value;
+
+    Token(TokenType type, string value) : type(type), value(value) {}
 };
 
-// Global variables for tokens and current token index
-vector<Token> tokens;
-size_t current_token_index = 0;
+// Scanner (Lexer) function to tokenize the input string
+vector<Token> scanner(const string& input) {
+    vector<Token> tokens;
+    int pos = 0;
+    int length = input.length();
 
-// Function prototypes
-void getNextToken();
-void program();
-void stmts();
-void stmt();
-void primary();
-void primary_tail();
-void error(const string& message);
-
-// Helper functions to determine token type
-TokenType getTokenType(const string& token_str) {
-    if (regex_match(token_str, regex("[A-Za-z_][A-Za-z0-9_]*"))) {
-        return TOKEN_ID;
-    }
-    if (regex_match(token_str, regex("\"[^\"]*\""))) {
-        return TOKEN_STRLIT;
-    }
-    if (token_str == "(") {
-        return TOKEN_LBR;
-    }
-    if (token_str == ")") {
-        return TOKEN_RBR;
-    }
-    if (token_str == ".") {
-        return TOKEN_DOT;
-    }
-    return TOKEN_INVALID;
-}
-
-// Lexer using regex for tokenization
-vector<Token> tokenize(const string& input) {
-    vector<Token> result;
-    regex token_regex(R"((\"[^\"]*\"|[A-Za-z_][A-Za-z0-9_]*|\(|\)|\.))");
-    auto words_begin = sregex_iterator(input.begin(), input.end(), token_regex);
-    auto words_end = sregex_iterator();
-
-    for (auto it = words_begin; it != words_end; ++it) {
-        string token_str = it->str();
-        TokenType type = getTokenType(token_str);
-        if (type == TOKEN_INVALID) {
-            result.push_back({TOKEN_INVALID, token_str});
-            break; // No need to continue if an invalid token is found
-        }
-        result.push_back({type, token_str});
-    }
-    return result;
-}
-
-// Recursive descent parsing functions
-
-// program → stmts
-void program() {
-    stmts();
-}
-
-// stmts → stmt stmts | λ
-void stmts() {
-    if (tokens[current_token_index].type == TOKEN_ID || tokens[current_token_index].type == TOKEN_STRLIT) {
-        stmt();
-        stmts();
-    }
-}
-
-// stmt → primary | STRLIT | λ
-void stmt() {
-    if (tokens[current_token_index].type == TOKEN_ID) {
-        primary();
-    } else if (tokens[current_token_index].type == TOKEN_STRLIT) {
-        cout << "STRLIT " << tokens[current_token_index].value << endl;
-        getNextToken();
-    }
-}
-
-// primary → ID primary_tail
-void primary() {
-    if (tokens[current_token_index].type == TOKEN_ID) {
-        cout << "ID " << tokens[current_token_index].value << endl;
-        getNextToken();
-        primary_tail();
-    }
-}
-
-// primary_tail → DOT ID primary_tail | LBR stmt RBR primary_tail | λ
-void primary_tail() {
-    if (tokens[current_token_index].type == TOKEN_DOT) {
-        cout << "DOT ." << endl;
-        getNextToken();
-        if (tokens[current_token_index].type == TOKEN_ID) {
-            cout << "ID " << tokens[current_token_index].value << endl;
-            getNextToken();
-            primary_tail();
-        } else {
-            error("Expected ID after DOT");
-        }
-    } else if (tokens[current_token_index].type == TOKEN_LBR) {
-        cout << "LBR (" << endl;
-        getNextToken();
-        stmt();
-        if (tokens[current_token_index].type == TOKEN_RBR) {
-            cout << "RBR )" << endl;
-            getNextToken();
-            primary_tail();
-        } else {
-            error("Expected RBR after stmt");
-        }
-    }
-}
-
-// Function to move to the next token
-void getNextToken() {
-    if (current_token_index < tokens.size() - 1) {
-        current_token_index++;
-    } else {
-        tokens.push_back({TOKEN_END, ""});
-    }
-}
-
-// Error handling function
-void error(const string& message) {
-    cout << "invalid input" << endl;
-    exit(1);
-}
-
-// Main function
-int main() {
-    string line;
-
-    // Process multiple lines of input
-    while (getline(cin, line)) {
-        tokens = tokenize(line);
-        if (tokens.empty() || tokens[0].type == TOKEN_INVALID) {
-            cout << "invalid input" << endl;
+    while (pos < length) {
+        // Skip whitespace
+        if (isspace(input[pos])) {
+            pos++;
             continue;
         }
 
-        // Initialize and start parsing
-        current_token_index = 0;
-        getNextToken();
-        program();
+        // Recognize string literals (STRLIT)
+        if (input[pos] == '"') {
+            string result;
+            result += input[pos++];  // Add the opening quote
+            while (pos < length && input[pos] != '"') {
+                result += input[pos++];
+            }
+            if (pos < length && input[pos] == '"') {
+                result += input[pos++];  // Add the closing quote
+                tokens.push_back(Token(STRLIT, result));
+            } else {
+                tokens.push_back(Token(INVALID, result));  // Unterminated string literal
+            }
+            continue;
+        }
 
-        // Check if all tokens were consumed
-        if (tokens[current_token_index].type != TOKEN_END) {
-            error("Unexpected token after valid input");
+        // Recognize identifiers (IDs)
+        if (isalpha(input[pos]) || input[pos] == '_') {
+            string result;
+            while (pos < length && (isalnum(input[pos]) || input[pos] == '_')) {
+                result += input[pos++];
+            }
+            tokens.push_back(Token(ID, result));
+            continue;
+        }
+
+        // Recognize left parenthesis '('
+        if (input[pos] == '(') {
+            tokens.push_back(Token(LBR, "("));
+            pos++;
+            continue;
+        }
+
+        // Recognize right parenthesis ')'
+        if (input[pos] == ')') {
+            tokens.push_back(Token(RBR, ")"));
+            pos++;
+            continue;
+        }
+
+        // Recognize dot '.'
+        if (input[pos] == '.') {
+            tokens.push_back(Token(DOT, "."));
+            pos++;
+            continue;
+        }
+
+        // Invalid token (unrecognized character)
+        tokens.push_back(Token(INVALID, string(1, input[pos])));
+        pos++;
+    }
+    return tokens;
+}
+
+// Global variables for storing tokens and current token position
+vector<Token> tokens;
+int currentPos = 0;
+
+// Function to get the current token
+Token currentToken() {
+    if (currentPos < tokens.size()) {
+        return tokens[currentPos];
+    }
+    return Token(INVALID, "");  // Return END token if out of bounds
+}
+
+// Function to move to the next token
+void advanceToken() {
+    if (currentPos < tokens.size()) {
+        currentPos++;
+    }
+}
+
+// Function to match the expected token type and advance
+void match(TokenType expectedType) {
+    if (currentToken().type == expectedType) {
+        advanceToken();
+    } else {
+        cout << "invalid input" << endl;
+        exit(1);  // Exit on syntax error
+    }
+}
+
+// Recursive function for parsing "primary_tail" (productions 8-10)
+void parsePrimaryTail() {
+    if (currentToken().type == DOT) {
+        match(DOT);
+        match(ID);
+        parsePrimaryTail();
+    } else if (currentToken().type == LBR) {
+        match(LBR);
+        parseStmt();
+        match(RBR);
+        parsePrimaryTail();
+    }
+    // ε (lambda) is automatically handled as we do nothing when there is no match
+}
+
+// Recursive function for parsing "primary" (production 7)
+void parsePrimary() {
+    if (currentToken().type == ID) {
+        match(ID);
+        parsePrimaryTail();
+    } else {
+        cout << "invalid input" << endl;
+        exit(1);
+    }
+}
+
+// Recursive function for parsing "stmt" (productions 4-6)
+void parseStmt() {
+    if (currentToken().type == ID) {
+        parsePrimary();
+    } else if (currentToken().type == STRLIT) {
+        match(STRLIT);
+    }
+    // ε (lambda) is automatically handled by not doing anything if no stmt is found
+}
+
+// Recursive function for parsing "stmts" (productions 2-3)
+void parseStmts() {
+    if (currentToken().type == ID || currentToken().type == STRLIT) {
+        parseStmt();
+        parseStmts();
+    }
+    // ε (lambda) is automatically handled by not doing anything if no stmts are found
+}
+
+// Recursive function for parsing "program" (production 1)
+void parseProgram() {
+    parseStmts();
+}
+
+// Main function to drive the parser
+int main() {
+    // Input string
+    string input;
+    while (true){
+        if (!getline(cin, input)) {
+            break;
+        } else {
+            // Step 1: Scan the input and get the list of tokens
+            tokens = scanner(input);
+
+            // printTokens(tokens);
+            bool inv = false;
+            string outputString = "";
+            for (Token token : tokens) {
+                if (token.type == INVALID) {
+                    cout << "invalid input" << endl;
+                    inv = true;
+                    break;
+                } else {
+                    outputString += types[token.type] + " " + token.value + "\n";
+                }
+            }
+            if (!inv) {
+                cout << outputString;  // Print the parsed tokens            
+            }
+            //if (inv) break;
+
+            // Step 2: Start parsing the token list using recursive descent
+            currentPos = 0;  // Reset token position
+            parseProgram();  // Begin parsing from the root non-terminal 'program'
+
+            // Check if all tokens were consumed (should end with END token)
+            if (!tokens.empty()) {
+                // cout << "invalid input2" << endl;
+            }
         }
     }
+
 
     return 0;
 }
