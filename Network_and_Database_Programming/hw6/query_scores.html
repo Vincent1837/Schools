@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query Total Scores</title>
+</head>
+<body>
+    <h1>Query Total Scores</h1>
+    <form method="POST">
+        <label for="cid">Course ID:</label>
+        <input type="text" name="cid" id="cid" required><br>
+        <button type="submit">Query Scores</button>
+    </form>
+
+    {% if results %}
+    <h2>Results:</h2>
+    <ul>
+        {% for result in results %}
+        <li>{{ result[0] }}: {{ result[1] }} {{ result[2] }} - Total Score: {{ result[3] }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
