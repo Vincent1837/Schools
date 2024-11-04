@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <form method='post' action={{ url_for('Insert') }}> 
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="StudentName"><br><br>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="StudentId"><br><br>
+
+        <label for="grade">Grade:</label>
+        <select id="grade" name="StudentGrade">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select><br><br>
+
+        <label>Sex:</label>
+        <input type="radio" id="male" name="StudentSex" value="M">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="StudentSex" value="F">
+        <label for="female">Female</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    {{ messages }}
+</body>
+</html>
