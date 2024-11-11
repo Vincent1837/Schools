@@ -5,7 +5,7 @@ import wx.lib.filebrowsebutton as filebrowse
 import wx.lib.scrolledpanel as scrolled
 
 # MongoDB 連線設置
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb+srv://yuanchan1837:yuanchan1837@cluster0.dc6xs.mongodb.net/")
 db = client['baseball']
 team_collection = db['teams']
 player_collection = db['players']
