@@ -203,6 +203,9 @@ int main() {
         }
     }
 
+    int indent_level = 0;
+    string yytext = "yytext";
+    printf("%*s%s%s%s\n", indent_level * 4, "", "cout << \"", yytext + 7, "\" << endl;"); 
 
     return 0;
 }
