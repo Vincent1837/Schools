@@ -34,14 +34,12 @@ extern "C" int yywrap() {
 }
 %}
 
-// Declare custom states
 %x SINGLE_COMMENT
 %x MULTI_COMMENT
 %x PRINT_STATE
 
 %%
 
-// Handle single-line comments
 "\t"*"# " {
     string current_line = yytext;
     close_braces(current_line);
@@ -59,7 +57,6 @@ extern "C" int yywrap() {
     cout << yytext;
 }
 
-// Handle multiline comments
 "\t"*"\"\"\"" {
     string current_line = yytext;
     close_braces(current_line);
@@ -77,7 +74,6 @@ extern "C" int yywrap() {
     cout << yytext;
 }
 
-// Handle print statements
 "\t"*"print(" {
     string current_line = yytext;
     close_braces(current_line);
@@ -95,27 +91,22 @@ extern "C" int yywrap() {
     cout << yytext;
 }
 
-// Handle if statements
 "if "(True|False)":\n" {
     output_indentation();
     cout << "if(" << (yytext[3] == 'T' ? "true" : "false") << ") {\n";
     ++indentation_level;
 }
 
-// Manage tab-based indentation
 "\t"* {
     string current_line = yytext;
     close_braces(current_line);
 }
 
-// Handle newline characters
 \n|\r\n {
     string current_line = yytext;
     close_braces(current_line);
     cout << "\n";
 }
-
-// Ignore other characters
 . {}
 
 %%
@@ -124,8 +115,4 @@ int main() {
     yylex();
     close_braces("");
     return 0;
-}
-
-int yywrap () {
-    return 1;
 }

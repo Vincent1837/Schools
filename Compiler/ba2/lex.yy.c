@@ -282,34 +282,33 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 8
-#define YY_END_OF_BUFFER 9
-static yyconst short int yy_accept[71] =
+#define YY_NUM_RULES 14
+#define YY_END_OF_BUFFER 15
+static yyconst short int yy_accept[55] =
     {   0,
-        0,    7,    9,    8,    8,    1,    8,    8,    7,    7,
-        7,    1,    7,    7,    0,    1,    0,    0,    7,    7,
-        5,    7,    1,    7,    7,    0,    0,    0,    5,    7,
-        7,    7,    0,    0,    0,    0,    0,    0,    7,    7,
-        7,    7,    7,    0,    0,    0,    0,    7,    7,    7,
-        7,    2,    0,    0,    0,    2,    7,    7,    7,    0,
-        0,    0,    7,    7,    7,    4,    3,    4,    3,    0
+       11,   11,    0,    0,    0,    0,    0,    0,   15,   13,
+       11,   12,   13,   13,   13,   13,   13,    3,    2,    6,
+        6,    9,   14,    8,   11,    0,    0,    0,   12,    0,
+        1,    0,    0,    0,    8,    4,    0,    0,    0,    0,
+        0,    0,    5,    0,    0,    0,    0,    0,    7,    0,
+        0,    0,   10,    0
     } ;
 
 static yyconst int yy_ec[256] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
+        1,    1,    4,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    5,    1,    6,    7,    1,    1,    1,    1,    8,
+        9,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,   10,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,   11,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    4,    5,    1,    1,    1,    1,    6,
-        7,    1,    1,    1,    1,    1,    1,    8,    8,    8,
-        8,    8,    8,    8,    8,    8,    8,    9,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,   10,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,   11,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,   12,    1,    1,    1,
+        1,    1,    1,   12,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,   13,    1,    1,    1,
 
-       13,   14,    1,    1,   15,    1,    1,   16,    1,   17,
-        1,   18,    1,   19,   20,   21,   22,    1,    1,    1,
+       14,   15,    1,    1,   16,    1,    1,   17,    1,   18,
+        1,   19,    1,   20,   21,   22,   23,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -327,67 +326,57 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[23] =
+static yyconst int yy_meta[24] =
     {   0,
-        1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1
     } ;
 
-static yyconst short int yy_base[79] =
+static yyconst short int yy_base[59] =
     {   0,
-        0,   17,   85,   86,   80,    0,   69,   63,    0,    1,
-       77,    0,   66,   60,   74,    0,   57,   61,    0,    5,
-        0,   71,    0,   54,   58,    5,    1,   55,    0,   10,
-        6,   54,   20,   22,   66,   57,   49,   46,   24,   62,
-       53,   45,   42,   58,   45,   38,   53,   54,   41,   34,
-       49,   86,   34,   40,   44,    0,   31,   37,   41,   35,
-       38,   22,   33,   36,   26,   86,   86,    0,    0,   86,
-       35,   37,   43,   30,    1,    0,   39,   41
+        0,   18,   57,   56,   52,   51,    2,    5,   56,   61,
+       36,   61,   51,   47,   47,   36,   30,   61,   61,   61,
+       43,   61,   61,   45,    0,   41,   41,   25,   61,   38,
+       61,   36,   24,   33,   61,   61,    1,   18,   32,   20,
+       12,    9,   61,   13,    6,   20,    6,   12,   61,    9,
+        8,   14,   61,   61,   14,    9,    8,    0
     } ;
 
-static yyconst short int yy_def[79] =
+static yyconst short int yy_def[59] =
     {   0,
-       71,   72,   70,   70,   70,   73,   70,   70,   74,   74,
-       74,   75,   74,   74,   70,   73,   70,   70,   74,   74,
-       76,   74,   75,   74,   74,   77,   70,   70,   76,   78,
-       74,   74,   77,   77,   70,   70,   70,   70,   78,   74,
-       74,   74,   74,   70,   70,   70,   70,   74,   74,   74,
-       74,   70,   70,   70,   70,   74,   74,   74,   74,   70,
-       70,   70,   74,   74,   74,   70,   70,   74,   74,    0,
-       70,   70,   70,   70,   70,   70,   70,   70
+       55,   55,   56,   56,   57,   57,   58,   58,   54,   54,
+       54,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,   54,   11,   54,   54,   54,   54,   54,
+       54,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,    0,   54,   54,   54,   54
     } ;
 
-static yyconst short int yy_nxt[109] =
+static yyconst short int yy_nxt[85] =
     {   0,
-       29,   23,   20,    5,    6,   21,   20,   34,   35,   21,
-       36,   37,   34,   40,    7,   41,   42,    8,   10,    4,
-       11,   12,   34,   35,   34,   35,   34,   40,   67,   62,
-       19,   13,   69,   65,   14,    4,    4,    9,    9,   33,
-       33,   39,   39,   16,   68,   64,   66,   61,   65,   64,
-       63,   62,   61,   60,   59,   58,   57,   56,   55,   54,
-       53,   52,   51,   50,   49,   48,   47,   46,   45,   44,
-       43,   38,   32,   31,   30,   28,   27,   26,   25,   24,
-       22,   18,   17,   15,   70,    3,   70,   70,   70,   70,
-       70,   70,   70,   70,   70,   70,   70,   70,   70,   70,
-
-       70,   70,   70,   70,   70,   70,   70,   70
+       22,   11,   12,   13,   23,   14,   15,   23,   20,   18,
+       24,   40,   41,   24,   10,   16,   53,   52,   17,   11,
+       12,   13,   51,   14,   15,   51,   50,   49,   48,   47,
+       46,   45,   44,   16,   43,   42,   17,   25,   39,   38,
+       37,   26,   27,   36,   33,   31,   30,   35,   34,   33,
+       32,   31,   30,   29,   28,   54,   21,   21,   19,   19,
+        9,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,   54
     } ;
 
-static yyconst short int yy_chk[109] =
+static yyconst short int yy_chk[85] =
     {   0,
-       76,   75,   10,    1,    1,   10,   20,   26,   26,   20,
-       27,   27,   30,   30,    1,   31,   31,    1,    2,    2,
-        2,    2,   33,   33,   34,   34,   39,   39,   62,   62,
-       74,    2,   65,   65,    2,   71,   71,   72,   72,   77,
-       77,   78,   78,   73,   64,   63,   61,   60,   59,   58,
-       57,   55,   54,   53,   51,   50,   49,   48,   47,   46,
-       45,   44,   43,   42,   41,   40,   38,   37,   36,   35,
-       32,   28,   25,   24,   22,   18,   17,   15,   14,   13,
-       11,    8,    7,    5,    3,   70,   70,   70,   70,   70,
-       70,   70,   70,   70,   70,   70,   70,   70,   70,   70,
-
-       70,   70,   70,   70,   70,   70,   70,   70
+       58,    1,    1,    1,    7,    1,    1,    8,   57,   56,
+        7,   37,   37,    8,   55,    1,   52,   51,    1,    2,
+        2,    2,   50,    2,    2,   48,   47,   46,   45,   44,
+       42,   41,   40,    2,   39,   38,    2,   11,   34,   33,
+       32,   11,   11,   30,   28,   27,   26,   24,   21,   17,
+       16,   15,   14,   13,   11,    9,    6,    5,    4,    3,
+       54,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,   54,   54,   54,   54,   54,   54,   54,
+       54,   54,   54,   54
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -404,10 +393,46 @@ char *yytext;
 #line 1 "ba2b.l"
 #define INITIAL 0
 #line 2 "ba2b.l"
-#include <stdio.h>
-#include <string.h>
-int indent_level = 0; // To track and preserve indentation in nested if statements
-#line 411 "lex.yy.c"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int indentation_level = 0;
+
+void output_indentation() {
+    for (int i = 0; i < indentation_level; ++i) {
+        cout << "\t";
+    }
+}
+
+int get_leading_tabs(const string &line) {
+    int tab_count = 0;
+    for (char ch : line) {
+        if (ch != '\t') break;
+        ++tab_count;
+    }
+    return tab_count;
+}
+
+void close_braces(const string &line) {
+    while (get_leading_tabs(line) < indentation_level) {
+        --indentation_level;
+        output_indentation();
+        cout << "}\n";
+    }
+}
+
+extern "C" int yywrap() {
+    return 1; 
+}
+#define SINGLE_COMMENT 1
+
+#define MULTI_COMMENT 2
+
+#define PRINT_STATE 3
+
+#line 436 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -550,9 +575,6 @@ YY_MALLOC_DECL
 #endif
 
 #define YY_RULE_SETUP \
-	if ( yyleng > 0 ) \
-		yy_current_buffer->yy_at_bol = \
-				(yytext[yyleng - 1] == '\n'); \
 	YY_USER_ACTION
 
 YY_DECL
@@ -561,10 +583,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 7 "ba2b.l"
+#line 41 "ba2b.l"
 
 
-#line 568 "lex.yy.c"
+#line 590 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -603,7 +625,6 @@ YY_DECL
 		yy_bp = yy_cp;
 
 		yy_current_state = yy_start;
-		yy_current_state += YY_AT_BOL();
 yy_match:
 		do
 			{
@@ -616,13 +637,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 71 )
+				if ( yy_current_state >= 55 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 86 );
+		while ( yy_base[yy_current_state] != 61 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -650,64 +671,123 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "ba2b.l"
-{ 
-                                    printf("//%s\n", yytext + 1); 
-                                } // Single-line comment transformation
+#line 43 "ba2b.l"
+{
+    string current_line = yytext;
+    close_braces(current_line);
+    output_indentation();
+    cout << "// ";
+    BEGIN SINGLE_COMMENT;
+}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 13 "ba2b.l"
-{ 
-                                    printf("/*%s*/\n", yytext + 3); 
-                                } // Multiline comment transformation
+#line 51 "ba2b.l"
+{
+    cout << "\n";
+    BEGIN INITIAL;
+}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 17 "ba2b.l"
-{ 
-                                    printf("%*s%s%d%s\n", indent_level * 4, "", "cout << ", atoi(yytext + 6), " << endl;"); 
-                                } // print statement with integer
+#line 56 "ba2b.l"
+{
+    cout << yytext;
+}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 21 "ba2b.l"
-{ 
-                                    indent_level++; 
-                                    printf("%*s%s%s%s\n", (indent_level - 1) * 4, "", "if(", strcmp(yytext + 3, "True") == 0 ? "true" : "false", ") {");
-                                } // if statement transformation
+#line 60 "ba2b.l"
+{
+    string current_line = yytext;
+    close_braces(current_line);
+    output_indentation();
+    cout << "/*";
+    BEGIN MULTI_COMMENT;
+}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 26 "ba2b.l"
-{ 
-                                    printf("%*s%s%s\n", indent_level * 4, "", "//", yytext + indent_level); 
-                                } // Indented single-line comments in if body
+#line 68 "ba2b.l"
+{
+    cout << "*/\n";
+    BEGIN INITIAL;
+}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 30 "ba2b.l"
-{ 
-                                    printf("%*s/*%s*/\n", indent_level * 4, "", yytext + indent_level); 
-                                } // Indented multiline comments in if body
+#line 73 "ba2b.l"
+{
+    cout << yytext;
+}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 34 "ba2b.l"
-{ 
-                                    if (indent_level > 0) { 
-                                        indent_level--; 
-                                        printf("%*s}\n", indent_level * 4, ""); 
-                                    } 
-                                } // Closing brace for if body
+#line 77 "ba2b.l"
+{
+    string current_line = yytext;
+    close_braces(current_line);
+    output_indentation();
+    cout << "cout << ";
+    BEGIN PRINT_STATE;
+}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 41 "ba2b.l"
+#line 85 "ba2b.l"
+{
+    cout << " << endl;\n";
+    BEGIN INITIAL;
+}
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 90 "ba2b.l"
+{
+    cout << yytext;
+}
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 94 "ba2b.l"
+{
+    output_indentation();
+    cout << "if(" << (yytext[3] == 'T' ? "true" : "false") << ") {\n";
+    ++indentation_level;
+}
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 100 "ba2b.l"
+{
+    string current_line = yytext;
+    close_braces(current_line);
+}
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 105 "ba2b.l"
+{
+    string current_line = yytext;
+    close_braces(current_line);
+    cout << "\n";
+}
+	YY_BREAK
+case 13:
+YY_RULE_SETUP
+#line 110 "ba2b.l"
+{}
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 112 "ba2b.l"
 ECHO;
 	YY_BREAK
-#line 710 "lex.yy.c"
+#line 787 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
+case YY_STATE_EOF(SINGLE_COMMENT):
+case YY_STATE_EOF(MULTI_COMMENT):
+case YY_STATE_EOF(PRINT_STATE):
 	yyterminate();
 
 	case YY_END_OF_BUFFER:
@@ -986,7 +1066,6 @@ static yy_state_type yy_get_previous_state()
 	register char *yy_cp;
 
 	yy_current_state = yy_start;
-	yy_current_state += YY_AT_BOL();
 
 	for ( yy_cp = yytext_ptr + YY_MORE_ADJ; yy_cp < yy_c_buf_p; ++yy_cp )
 		{
@@ -999,7 +1078,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 71 )
+			if ( yy_current_state >= 55 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1034,11 +1113,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 71 )
+		if ( yy_current_state >= 55 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 70);
+	yy_is_jam = (yy_current_state == 54);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1157,7 +1236,6 @@ static int input()
 	*yy_c_buf_p = '\0';	/* preserve yytext */
 	yy_hold_char = *++yy_c_buf_p;
 
-	yy_current_buffer->yy_at_bol = (c == '\n');
 
 	return c;
 	}
@@ -1594,14 +1672,15 @@ int main()
 	return 0;
 	}
 #endif
-#line 41 "ba2b.l"
+#line 112 "ba2b.l"
 
 
 int main() {
     yylex();
+    close_braces("");
     return 0;
 }
 
-int yywrap() {
+int yywrap () {
     return 1;
 }
