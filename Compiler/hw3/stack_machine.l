@@ -1,10 +1,23 @@
 %option noyywrap
 
-%%
-[0-9]+    { yylval = atoi(yytext); return NUMBER; }
-.        { return yytext[0]; }
+%{
+    #include "stack_machine.tab.h"
+    extern int yylval;
+%}
+
 %%
 
-int yywrap() {
-    return 1;
+add     { return ADD; }
+sub     { return SUB; }
+mul     { return MUL; }
+mod     { return MOD; }
+inc     { return INC; }
+dec     { return DEC; }
+load[ \t]+[0-9]+    { 
+    yylval = atoi(yytext + 5);
+    return LOAD;
 }
+[ \t\n] { /* Ignore blank spaces */ }
+.       { return yytext[0]; }
+
+%%
