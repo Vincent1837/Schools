@@ -50,17 +50,12 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QListWidget, QListWidgetItem
 
 class NewsApp(QMainWindow):
     def __init__(self):
         super().__init__()
         
-        from pymongo import MongoClient
         self.df = pd.read_csv("yahooNews.csv")
-        self.db_client = MongoClient("mongodb+srv://yuanchan1837:ag061837@cluster0.dc6xs.mongodb.net/")
-        self.db = self.db_client["yahoo_news_database"]
-        self.collection = self.db["yahoo_news_collection"]
 
         # 窗口設置
         self.setWindowTitle("Yahoo新聞資料庫")
@@ -71,16 +66,16 @@ class NewsApp(QMainWindow):
         main_layout = QHBoxLayout(main_widget)
 
         # 左側控制區域
-        self.control_layout = QVBoxLayout()
-        self.news_list = QListWidget()  # List to display saved news titles
-
+        control_layout = QVBoxLayout()
         btn_random = QPushButton("Random News")
         btn_store = QPushButton("Store To Database")
-        self.control_layout.addWidget(btn_random)
-        self.control_layout.addWidget(btn_store)
-        self.control_layout.addWidget(self.news_list)
-        self.control_layout.addStretch()  # 增加空白區域
-        main_layout.addLayout(self.control_layout, 1)
+        control_layout.addWidget(btn_random)
+        control_layout.addWidget(btn_store)
+        control_layout.addStretch()  # 增加空白區域
+        main_layout.addLayout(control_layout, 1)
+        
+        btn_random.clicked.connect(self.random_news)
+        btn_store.clicked.connect(self.store_to_database)
 
         # 右側新聞顯示區域
         self.scroll_area = QScrollArea()
@@ -92,35 +87,10 @@ class NewsApp(QMainWindow):
 
         self.setCentralWidget(main_widget)
         self.news = {}
-
         # 加載新聞
-        btn_random.clicked.connect(self.random_news)
-        btn_store.clicked.connect(self.store_to_database)
-        self.news_list.itemClicked.connect(self.load_saved_news)  # Event for loading saved news
-
-        self.load_saved_news_list()
         self.random_news()
         self.load_news()
 
-    def load_saved_news_list(self):
-        """Load news titles from the database into the list"""
-        self.news_list.clear()
-        saved_news = self.collection.find({}, {"_id": 1, "Title": 1})
-        for news in saved_news:
-            item = QListWidgetItem(news["Title"])
-            item.setData(Qt.UserRole, str(news["_id"]))
-            self.news_list.addItem(item)
-
-    def load_saved_news(self, item):
-        """Load selected news from the database"""
-        from bson.objectid import ObjectId
-        news_id = item.data(Qt.UserRole)
-        news = self.collection.find_one({"_id": ObjectId(news_id)})
-
-        self.news = news
-        self.load_news()
-
-    # Other existing methods remain unchanged...
     def random_news(self):
         
         sample = df.sample(1)
@@ -217,7 +187,6 @@ class NewsApp(QMainWindow):
         collection.insert_one(self.news)
         print("新聞已儲存至 MongoDB")
         client.close()
-        self.load_saved_news_list()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
