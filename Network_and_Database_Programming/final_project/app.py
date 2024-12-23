@@ -13,7 +13,6 @@ soup = BeautifulSoup(response.content, 'html.parser')
 
 # Scrape headlines and links
 topics = soup.find_all("li", class_="Pos(r) Lh(1.5) H(24px) Mb(8px)")
-print(topics)
 articles = []
 
 for topic in topics:
@@ -46,7 +45,7 @@ import requests
 from io import BytesIO
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QLabel, QPushButton,
-    QScrollArea, QWidget, QHBoxLayout
+    QScrollArea, QWidget, QHBoxLayout, QMessageBox
 )
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
@@ -120,9 +119,10 @@ class NewsApp(QMainWindow):
         self.news = news
         self.load_news()
 
-    # Other existing methods remain unchanged...
     def random_news(self):
-        
+        """
+        載入隨機新聞
+        """
         sample = df.sample(1)
         link = sample["Link"].values[0]
         article_response = requests.get(link)
@@ -155,6 +155,9 @@ class NewsApp(QMainWindow):
         self.news = {"Title": title, "Content": filtered_data, "Link": link}
         self.load_news()
     def load_news(self):
+        """
+        載入新聞內容
+        """
         # 清空舊內容
         for i in reversed(range(self.scroll_layout.count())):
             widget = self.scroll_layout.itemAt(i).widget()
@@ -163,7 +166,7 @@ class NewsApp(QMainWindow):
 
         # 添加新聞標題
         title_label = QLabel(self.news["Title"])
-        title_label.setStyleSheet("font-size: 18px; font-weight: bold;")
+        title_label.setStyleSheet("font-size: 30px; font-weight: bold;")
         self.scroll_layout.addWidget(title_label)
 
         # 添加新聞內容
@@ -180,7 +183,7 @@ class NewsApp(QMainWindow):
         """添加段落文字"""
         paragraph_label = QLabel(text)
         paragraph_label.setWordWrap(True)  # 自動換行
-        paragraph_label.setStyleSheet("font-size: 14px; margin: 10px 0;")
+        paragraph_label.setStyleSheet("font-size: 16px; margin: 10px 0;")
         self.scroll_layout.addWidget(paragraph_label)
 
     def add_image(self, src, alt):
@@ -199,7 +202,7 @@ class NewsApp(QMainWindow):
             # 添加圖片描述
             if alt:
                 alt_label = QLabel(alt)
-                alt_label.setStyleSheet("font-size: 12px; color: gray;")
+                alt_label.setStyleSheet("font-size: 14px; color: gray;")
                 self.scroll_layout.addWidget(alt_label)
         except Exception as e:
             error_label = QLabel("圖片載入失敗")
@@ -210,13 +213,18 @@ class NewsApp(QMainWindow):
         """
         將目前新聞儲存至MongoDb
         """
-        from pymongo import MongoClient
-        client = MongoClient("mongodb+srv://yuanchan1837:ag061837@cluster0.dc6xs.mongodb.net/")
-        db = client["yahoo_news_database"]
-        collection = db["yahoo_news_collection"]
-        collection.insert_one(self.news)
+        # 檢查是否儲存過
+        if self.news["Title"] in [news["Title"] for news in self.collection.find({}, {"Title": 1})]:
+            # dialog
+            msg_box = QMessageBox()
+            msg_box.setWindowTitle("新聞已存在")
+            msg_box.setText("此新聞已存在資料庫中。")
+            msg_box.setStandardButtons(QMessageBox.Ok)
+            msg_box.exec_()
+            return
+
+        self.collection.insert_one(self.news)
         print("新聞已儲存至 MongoDB")
-        client.close()
         self.load_saved_news_list()
 
 if __name__ == "__main__":
