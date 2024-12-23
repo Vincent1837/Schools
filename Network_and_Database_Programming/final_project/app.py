@@ -12,33 +12,18 @@ response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 # Scrape headlines and links
-topics = soup.find_all("li", class_="Pos(r) Lh(1.5) H(24px) Mb(8px)")
 articles = []
-
-for topic in topics:
+for topic in soup.find_all("li", class_="Pos(r) Lh(1.5) H(24px) Mb(8px)"):
     topic_title = topic.find("a").string
     topic_link = topic.find("a")["href"]
-        
-    # Fetch the article content
-    article_response = requests.get(topic_link)
-    article_soup = BeautifulSoup(article_response.content, 'html.parser')
-    content = "\n".join([p.get_text(strip=True) for p in article_soup.find_all('p') if not p.get_text(strip=True).startswith('更多')])
 
-    # Fetch the article image
-    image_tag = article_soup.find("img", loading_="lazy")
-    
-    if image_tag:
-        image_url = image_tag["src"]
-        print("img saved!")
-    else:
-        image_url = None
-    
     # Append to the list
-    articles.append({"Title": topic_title, "Link": topic_link, "Content": content, "Image": image_url})
+    articles.append({"Title": topic_title, "Link": topic_link})
 
 # Save to csv
 df = pd.DataFrame(articles)
 df.to_csv("yahooNews.csv", index=False)
+print(df.head())
 
 import sys
 import requests
@@ -123,7 +108,7 @@ class NewsApp(QMainWindow):
         """
         載入隨機新聞
         """
-        sample = df.sample(1)
+        sample = self.df.sample(1)
         link = sample["Link"].values[0]
         article_response = requests.get(link)
         article_soup = BeautifulSoup(article_response.content, 'html.parser')
