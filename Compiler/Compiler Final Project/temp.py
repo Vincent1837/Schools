@@ -95,10 +95,7 @@ def p_def_stmt(p):
 
 def p_variable(p):
     '''variable : ID'''
-    if p[1] in symbol_table:
-        p[0] = symbol_table[p[1]]
-    else:
-        raise ValueError(f"Undefined variable '{p[1]}'")
+    p[0] = p[1]  # Pass the variable name for evaluation later
 
 def p_fun_call(p):
     '''fun_call : LPAREN fun_exp param_list RPAREN
@@ -170,34 +167,15 @@ def p_empty(p):
     p[0] = None
 
 def p_error(p):
-    # print(f"Syntax error at '{p.value}'")
-    raise ValueError("Syntax error at '{p.value}'")
+    print(f"Syntax error at '{p.value}'")
 
 def evaluate_function(body, bindings):
-    # Save the original global symbol table
-    global symbol_table
-    #print("DEBUG: Before evaluation, symbol_table:", symbol_table)
-    original_symbols = symbol_table.copy()
+    return evaluate_expression(body, bindings)
 
-    # Update symbol table with the local bindings (parameters)
-    symbol_table.update(bindings)
-
-    # Evaluate the function body using the updated symbol table
-    result = evaluate_expression(body)
-
-    # Restore the original global symbol table
-    symbol_table = original_symbols
-    
-
-    return result
-
-
-def evaluate_expression(exp):
-    #print("DEBUG: Evaluating expression:", exp)
-
+def evaluate_expression(exp, bindings=None):
     if isinstance(exp, dict):  # Compound expressions (e.g., operations)
         operator = exp.get('operator')
-        args = [evaluate_expression(arg) for arg in exp.get('args', [])]
+        args = [evaluate_expression(arg, bindings) for arg in exp.get('args', [])]
         # Handle arithmetic operations
         if operator == '+':
             return sum(args)
@@ -210,19 +188,22 @@ def evaluate_expression(exp):
             return args[0] - args[1]
         elif operator == '/':
             return args[0] // args[1]
-        # Add more operators as needed
-    elif isinstance(exp, str) and exp in symbol_table:  # Variable lookup
-        return symbol_table[exp]
+    elif isinstance(exp, str):  # Variable lookup
+        if bindings and exp in bindings:  # Check local scope first
+            return bindings[exp]
+        elif exp in symbol_table:  # Check global scope
+            return symbol_table[exp]
+        else:
+            raise ValueError(f"Undefined variable '{exp}'")
     else:
         return exp  # Literal values (numbers, booleans, etc.)
-
 
 # Build the parser
 parser = yacc.yacc(debug=True)
 
 # unit test for parser
 if __name__ == '__main__':
-    for i in range(1, 7):
+    for i in range(1, 9):
         for j in range(1, 3):
             test_file = f'public_test_data/0{i}_{j}.lsp'
             with open(test_file) as f:
@@ -232,6 +213,6 @@ if __name__ == '__main__':
             try:
                 result = parser.parse(code, lexer=lexer)
                 print(f'Result: {result}')
-            except:
-                print(f'syntax error')
+            except Exception as e:
+                print(f'syntax error: {e}')
             print('----------------------------------------------------------------')

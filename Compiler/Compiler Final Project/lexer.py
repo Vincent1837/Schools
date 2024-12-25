@@ -10,13 +10,13 @@ reserved = {
     'not': 'NOT',
     'mod': 'MOD',
     'print-num': 'PRINT_NUM',
-    'print-bool': 'PRINT_BOOL',
+    'print-bool': 'PRINT_BOOL'
 }
 
 # Token definitions
 tokens = [
     'NUMBER', 'ID', 'PLUS', 'MINUS', 'MULTIPLY', 'DIVIDE', 'GREATER',
-    'SMALLER', 'EQUAL', 'LPAREN', 'RPAREN', 'TRUE', 'FALSE'
+    'SMALLER', 'EQUAL', 'LPAREN', 'RPAREN', 'TRUE', 'FALSE', 'BOOL_VAL', "ILLEGAL"
 ] + list(reserved.values())
 
 # Regular expressions for tokens
@@ -29,8 +29,8 @@ t_SMALLER = r'<'
 t_EQUAL = r'='
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
-t_TRUE = r'\#t'
-t_FALSE = r'\#f'
+t_BOOL_VAL = r'\#t|\#f'
+
 
 # Reserved words and identifiers
 def t_ID(t):
@@ -54,13 +54,12 @@ def t_newline(t):
 
 # Error handling
 def t_error(t):
-    print(f"Illegal character '{t.value[0]}'")
+    #print(f"Illegal character '{t.value[0]}'")
     t.lexer.skip(1)
+    return '@@'
 
 # Build the lexer
 lexer = lex.lex()
-
-
 
 # unit test for lexer
 if __name__ == '__main__':
