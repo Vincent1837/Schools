@@ -11,7 +11,6 @@ def main():
             print(code)
             try:
                 result = parser.parse(code, lexer=lexer)
-                # print(f'Result: {result}')
             except Exception as e:
                 print(f'syntax error')
             print('----------------------------------------------------------------')
