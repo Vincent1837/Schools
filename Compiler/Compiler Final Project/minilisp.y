@@ -36,6 +36,7 @@ void define_symbol(char *name, int value);
 }
 
 // Grammar Rules and Actions
+
 %%
 program:
     stmt_list
@@ -57,11 +58,16 @@ print_stmt:
     | LPAREN PRINT_BOOL exp RPAREN { printf("%s\n", $3 ? "#t" : "#f"); }
     ;
 
+exp_list:
+    exp
+    | exp_list COMMA exp
+    ;
+
 exp:
     NUMBER                { $$ = $1; }
     | TRUE                { $$ = 1; }
     | FALSE               { $$ = 0; }
-    | ID                  { $$ = lookup_symbol($1); }
+    | variable                { $$ = lookup_symbol($1); }
     | num_op
     | logical_op
     | if_exp
@@ -78,6 +84,14 @@ num_op:
         for (int i = 0; i < $3.count; ++i) $$ *= $3.values[i];
     }
     | LPAREN DIVIDE exp exp RPAREN { $$ = $3 / $4; }
+    | LPAREN MOD exp exp RPAREN { $$ = $3 % $4; }
+    | LPAREN GREATER exp exp RPAREN { $$ = ($3 > $4) ? 1 : 0; }
+    | LPAREN SMALLER exp exp RPAREN { $$ = ($3 < $4) ? 1 : 0; }
+    | LPAREN EQUAL exp_list RPAREN {
+        int val = $3.values[0];
+        for (int i = 1; i < $3.count; ++i) bool b = val == $3.values[i];
+        $$ = b ? 1 : 0;
+    }
     ;
 
 logical_op:
@@ -91,9 +105,16 @@ if_exp:
     ;
 
 def_stmt:
-    LPAREN DEFINE ID exp RPAREN { define_symbol($3, $4); }
+    LPAREN DEFINE variable exp RPAREN { define_symbol($3, $4); }
+    ;
+
+variable:
+    ID {
+        
+    }
     ;
 %%
+
 int lookup_symbol(char *name) {
     for (int i = 0; i < symbol_count; ++i) {
         if (strcmp(symbol_table[i].name, name) == 0) {
